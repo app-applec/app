@@ -27,8 +27,8 @@ body {
 }
 
 .barra {
-    height: 110px;
     width: 100vw;
+    height: 110px;
     background-image: url(../img/fondmenu-home.png);
     background-size: cover;
     position: fixed;

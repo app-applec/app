@@ -1,0 +1,14 @@
+body {
+    background-color: #FFFAEA;
+    margin: auto;
+}
+
+.logo {
+    width: 165px;
+    height: 165px;
+    background-image: url(../img/logo-panot.svg);
+    background-size: cover;
+    position: absolute;
+    left: 136px;
+    top: 100px;
+}
