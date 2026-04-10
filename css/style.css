@@ -1,6 +1,8 @@
 body {
-    margin: 0,
+    margin: auto;
 }
+
+/* PAGINA 1 - HOME*/
 
 .cap {
     background-image: url(../img/bcn.jpg);
@@ -15,20 +17,22 @@ body {
     border-radius: 50px 50px 0 0;
     margin-top: -80px;
     width: 100vw;
+    margin: auto;
 }
 
 .bienvenida {
-    width: 200px;
+    width: 100vw;
     height: 100px;
     background: red;
     margin: 20px 20px;
 }
 
 .barra {
-    height: 110px;
     width: 100vw;
+    height: 110px;
     background-image: url(../img/fondmenu-home.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% auto; 
     position: fixed;
     bottom: 0;
     left: 0;
@@ -92,6 +96,8 @@ body {
     left: 128px;
 }
 
+/* FINAL*/
+
 /* PAGINA 2 - GRUPS*/
 
 #pg2grups .barra {
@@ -118,3 +124,96 @@ body {
     top: 46px;
     left: 50px;
 }
+
+/* FINAL*/
+
+
+/* PAGINA 3 - PANOT*/
+
+#pg3panot .barra {
+    height: 110px;
+    width: 100vw;
+    background-image: url(../img/fondmenu-panot.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#pg3panot .home {
+    background-image: url(../img/home-groc.png);
+    position: relative;
+    top: 46px;
+    left: 40px;
+}
+
+#pg3panot .pannot {
+    background-image: url(../img/panot-blanc.png);
+    position: relative;
+    top: 18px!important;
+    left: 84px;
+    height: 92px!important;
+    width: 92px!important;
+}
+
+/* FINAL*/
+
+/* PAGINA 4 - RECURSOS*/
+
+#pg4recursos .barra {
+    height: 110px;
+    width: 100vw;
+    background-image: url(../img/fondmenu-recursos.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#pg4recursos .home {
+    background-image: url(../img/home-groc.png);
+    position: relative;
+    top: 46px;
+    left: 40px;
+}
+
+#pg4recursos .recursos {
+    background-image: url(../img/recursos-blanc.png);
+    position: relative;
+    top: 46px;
+    left: 119px;
+}
+
+/* FINAL*/
+
+/* PAGINA 5 - PERFIL*/
+
+#pg5perfil .barra {
+    height: 110px;
+    width: 100vw;
+    background-image: url(../img/fondmenu-perfil.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#pg5perfil .home {
+    background-image: url(../img/home-groc.png);
+    position: relative;
+    top: 46px;
+    left: 40px;
+}
+
+
+#pg5perfil .perfil {
+    background-image: url(../img/perfil-blanc.png);
+    position: relative;
+    top: 43px;
+    left: 128px;
+}
+
+/* FINAL*/
