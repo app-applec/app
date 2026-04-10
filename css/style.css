@@ -43,8 +43,8 @@ body {
 }
 
 .barra li {
-    width: 60px;
-    height: 60px;
+    width: 60%;
+    height: 60%;
     background-size: cover;
     float: left;
     margin: 0;
