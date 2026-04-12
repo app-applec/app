@@ -1,5 +1,7 @@
 body {
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* PAGINA 1 - HOME*/
@@ -18,13 +20,14 @@ body {
     margin-top: -80px;
     width: 100vw;
     margin: auto;
+    padding-bottom: 120px; /* Para que el texto no quede debajo del menú */
 }
 
 .bienvenida {
-    width: 100vw;
+    width: calc(100% - 40px);
     height: 100px;
     background: red;
-    margin: 20px 20px;
+    margin: 20px auto;
 }
 
 .barra {
@@ -32,7 +35,7 @@ body {
     height: 110px;
     background-image: url(../img/fondmenu-home.png);
     background-repeat: no-repeat;
-    background-size: 100% auto; 
+    background-size: 100% 100%; /* Forzamos que el fondo ocupe todo el ancho */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -42,15 +45,16 @@ body {
 .barra ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .barra li {
-    width: 60px;
+    width: 15vw; /* Medida responsiva para el ancho del icono */
     height: 60px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     float: left;
-    margin: 0;
-    list-style-type: none;
+    position: relative;
 }
 
 .barra li a {
@@ -59,161 +63,58 @@ body {
     height: 100%;
 }
 
+/* POSICIONES CONVERTIDAS A RESPONSIVE */
+
 .home {
     background-image: url(../img/home-blanc.png);
-    position: relative;
     top: 46px;
-    left: 40px;
+    left: 7%; /* Equivale a tus 40px originales en un móvil estándar */
 }
 
 .grups {
     background-image: url(../img/grups-groc.png);
-    position: relative;
     top: 46px;
-    left: 50px;
+    left: 6%; 
 }
 
 .pannot {
     background-image: url(../img/panot-groc.png);
-    position: relative;
-    top: 18px!important;
-    left: 84px;
-    height: 92px!important;
-    width: 92px!important;
+    top: 18px !important;
+    left: 10%;
+    height: 92px !important;
+    width: 23vw !important; /* Más ancho por ser el central */
 }
 
 .recursos {
     background-image: url(../img/recursos-groc.png);
-    position: relative;
     top: 46px;
-    left: 119px;
+    left: 12%;
 }
 
 .perfil {
     background-image: url(../img/perfil-groc.png);
-    position: relative;
-    top: 43px;
-    left: 128px;
+    top: 48px;
+    left: 12%;
 }
 
-/* FINAL*/
+/* LÓGICA PARA LAS OTRAS PÁGINAS (ACTIVOS) */
 
-/* PAGINA 2 - GRUPS*/
+/* Pagina 2 - Grups */
+#pg2grups .barra { background-image: url(../img/fondmenu-grups.png); }
+#pg2grups .home { background-image: url(../img/home-groc.png); }
+#pg2grups .grups { background-image: url(../img/grups-blanc.png); }
 
-#pg2grups .barra {
-    height: 110px;
-    width: 100vw;
-    background-image: url(../img/fondmenu-grups.png);
-    background-size: cover;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+/* Pagina 3 - Panot */
+#pg3panot .barra { background-image: url(../img/fondmenu-panot.png); }
+#pg3panot .home { background-image: url(../img/home-groc.png); }
+#pg3panot .pannot { background-image: url(../img/panot-blanc.png); }
 
-#pg2grups .home {
-    background-image: url(../img/home-groc.png);
-    position: relative;
-    top: 46px;
-    left: 40px;
-}
+/* Pagina 4 - Recursos */
+#pg4recursos .barra { background-image: url(../img/fondmenu-recursos.png); }
+#pg4recursos .home { background-image: url(../img/home-groc.png); }
+#pg4recursos .recursos { background-image: url(../img/recursos-blanc.png); }
 
-#pg2grups .grups {
-    background-image: url(../img/grups-blanc.png);
-    position: relative;
-    top: 46px;
-    left: 50px;
-}
-
-/* FINAL*/
-
-
-/* PAGINA 3 - PANOT*/
-
-#pg3panot .barra {
-    height: 110px;
-    width: 100vw;
-    background-image: url(../img/fondmenu-panot.png);
-    background-size: cover;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#pg3panot .home {
-    background-image: url(../img/home-groc.png);
-    position: relative;
-    top: 46px;
-    left: 40px;
-}
-
-#pg3panot .pannot {
-    background-image: url(../img/panot-blanc.png);
-    position: relative;
-    top: 18px!important;
-    left: 84px;
-    height: 92px!important;
-    width: 92px!important;
-}
-
-/* FINAL*/
-
-/* PAGINA 4 - RECURSOS*/
-
-#pg4recursos .barra {
-    height: 110px;
-    width: 100vw;
-    background-image: url(../img/fondmenu-recursos.png);
-    background-size: cover;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#pg4recursos .home {
-    background-image: url(../img/home-groc.png);
-    position: relative;
-    top: 46px;
-    left: 40px;
-}
-
-#pg4recursos .recursos {
-    background-image: url(../img/recursos-blanc.png);
-    position: relative;
-    top: 46px;
-    left: 119px;
-}
-
-/* FINAL*/
-
-/* PAGINA 5 - PERFIL*/
-
-#pg5perfil .barra {
-    height: 110px;
-    width: 100vw;
-    background-image: url(../img/fondmenu-perfil.png);
-    background-size: cover;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#pg5perfil .home {
-    background-image: url(../img/home-groc.png);
-    position: relative;
-    top: 46px;
-    left: 40px;
-}
-
-
-#pg5perfil .perfil {
-    background-image: url(../img/perfil-blanc.png);
-    position: relative;
-    top: 43px;
-    left: 128px;
-}
-
-/* FINAL*/
+/* Pagina 5 - Perfil */
+#pg5perfil .barra { background-image: url(../img/fondmenu-perfil.png); }
+#pg5perfil .home { background-image: url(../img/home-groc.png); }
+#pg5perfil .perfil { background-image: url(../img/perfil-blanc.png); }
