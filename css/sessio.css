@@ -179,22 +179,23 @@ body {
     margin-bottom: 40px;
 }
 
-/* ============================================================
-   CONTROL TOTAL INDEPENDIENTE POR VENTANA
-   ============================================================ */
+/* CONTROL TOTAL INDEPENDIENTE POR VENTANA */
 
-/* --- 1. INICI DE SESSIÓ (#step-2) --- */
+/* 1. INICI DE SESSIÓ (#step-2) */
+
 #step-2 .form-title-serif {
     margin-top: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 #step-2 .custom-form { margin-top: 90px; }
 #step-2 .input-group input { height: 74px; }
 #step-2 .input-group { margin-bottom: 25px; }
 #step-2 .forgot-password { margin-top: -10px; margin-bottom: 10px; text-align: center; color: #B19146; font-size: 13px; }
 #step-2 .btn-full { height: 65px; }
 
-/* --- 2. REGISTRA'T (#step-3) --- */
+/* 2. REGISTRA'T (#step-3) */
+
 #step-3 .large-title {
     font-size: 58px;
     text-align: left;
@@ -206,7 +207,8 @@ body {
 #step-3 .input-group { margin-bottom: 35px; }
 #step-3 .btn-full { height: 55px; }
 
-/* --- VENTANAS CON PERSONAJE (4, 5, 6, 7 y 8) --- */
+/* VENTANAS CON PERSONAJE (4, 5, 6, 7 y 8) */
+
 #step-4, #step-5, #step-6, #step-7, #step-8 {
     padding-bottom: 0; 
     justify-content: flex-start;
@@ -230,7 +232,8 @@ body {
     z-index: 10;
 }
 
-/* === TAMAÑO DE NUBE UNIFICADO PARA EVITAR SALTOS === */
+/* TAMAÑO DE NUBE UNIFICADO PARA EVITAR SALTOS */
+
 #step-4 .speech-bubble,
 #step-5 .speech-bubble,
 #step-6 .speech-bubble,
@@ -269,9 +272,10 @@ body {
     font-weight: bold; 
 }
 
-/* --- BOTONES DENTRO DE LA NUBE (POSICIÓN FIJA) --- */
+/* BOTONES DENTRO DE LA NUBE (POSICIÓN FIJA) */
 
 /* Flechas (Pag 4, 7, 8) */
+
 #step-4 .btn-next-arrow,
 #step-7 .btn-next-arrow,
 #step-8 .btn-next-arrow {
@@ -292,6 +296,7 @@ body {
 .btn-next-arrow img { width: 30px; }
 
 /* Grupos de botones generales */
+
 .role-button-group, .level-button-group {
     position: absolute;
     bottom: 54px;
@@ -318,6 +323,7 @@ body {
 }
 
 /* AJUSTE ESPECÍFICO PÁGINA 6: BOTONES Y ESPACIADO CORREGIDO */
+
 #step-6 .level-button-group {
     bottom: 55px; /* Subido para que quede bien centrado en el área blanca */
     left: 50%;
@@ -338,7 +344,8 @@ body {
     max-width: 100px; /* Evita que crezcan demasiado en pantallas anchas */
 }
 
-/* --- PERSONAJE --- */
+/* PERSONAJE */
+
 .character-container {
     position: absolute;
     bottom: 0;
