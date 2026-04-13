@@ -4,7 +4,7 @@ body {
     overflow-x: hidden;
 }
 
-/* PAGINA 1 - HOME*/
+/* PAGINA 1 - HOME */
 
 .cap {
     background-image: url(../img/bcn.jpg);
@@ -80,7 +80,7 @@ body {
 .pannot {
     background-image: url(../img/panot-groc.png);
     top: 18px !important;
-    left: 9.8%;
+    left: 11.5%;
     height: 92px !important;
     width: 23vw !important; /* Más ancho por ser el central */
 }
@@ -88,7 +88,7 @@ body {
 .recursos {
     background-image: url(../img/recursos-groc.png);
     top: 46px;
-    left: 12%;
+    left: 11.2%;
 }
 
 .perfil {
