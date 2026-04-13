@@ -1,3 +1,95 @@
 body {
     background-color: red;
 }
+
+
+/* BARRA MENÚ */
+
+.barra {
+    width: 100vw;
+    height: 110px;
+    background-image: url(../img/fondmenu-home.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Forzamos que el fondo ocupe todo el ancho */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.barra ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.barra li {
+    width: 15vw; /* Medida responsiva para el ancho del icono */
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+    position: relative;
+}
+
+.barra li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* POSICIONES CONVERTIDAS A RESPONSIVE */
+
+.home {
+    background-image: url(../img/home-blanc.png);
+    top: 46px;
+    left: 7%; /* Equivale a tus 40px originales en un móvil estándar */
+}
+
+.grups {
+    background-image: url(../img/grups-groc.png);
+    top: 46px;
+    left: 6%; 
+}
+
+.pannot {
+    background-image: url(../img/panot-groc.png);
+    top: 18px !important;
+    left: 11.4%;
+    height: 92px !important;
+    width: 23vw !important; /* Más ancho por ser el central */
+}
+
+.recursos {
+    background-image: url(../img/recursos-groc.png);
+    top: 46px;
+    left: 13%;
+}
+
+.perfil {
+    background-image: url(../img/perfil-groc.png);
+    top: 48px;
+    left: 12%;
+}
+
+/* LÓGICA PARA LAS OTRAS PÁGINAS (ACTIVOS) */
+
+/* Pagina 2 - Grups */
+#pg2grups .barra { background-image: url(../img/fondmenu-grups.png); }
+#pg2grups .home { background-image: url(../img/home-groc.png); }
+#pg2grups .grups { background-image: url(../img/grups-blanc.png); }
+
+/* Pagina 3 - Panot */
+#pg3panot .barra { background-image: url(../img/fondmenu-panot.png); }
+#pg3panot .home { background-image: url(../img/home-groc.png); }
+#pg3panot .pannot { background-image: url(../img/panot-blanc.png); }
+
+/* Pagina 4 - Recursos */
+#pg4recursos .barra { background-image: url(../img/fondmenu-recursos.png); }
+#pg4recursos .home { background-image: url(../img/home-groc.png); }
+#pg4recursos .recursos { background-image: url(../img/recursos-blanc.png); }
+
+/* Pagina 5 - Perfil */
+#pg5perfil .barra { background-image: url(../img/fondmenu-perfil.png); }
+#pg5perfil .home { background-image: url(../img/home-groc.png); }
+#pg5perfil .perfil { background-image: url(../img/perfil-blanc.png); }
