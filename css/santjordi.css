@@ -42,34 +42,207 @@ body {
     background-color: #F5C143;
     font-family: 'SourceSans-Regular', sans-serif;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
+.contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 .blanc {
-    width: 50vh;
+    width: 100%;
+    max-width: 500px;
     height: 85vh;
     background-color: white;
     position: fixed;
     top: 15%;
-    border-radius: 30px 30px 0 0;
+    border-radius: 40px 40px 0 0;
+    overflow-y: auto;
+    padding-bottom: 120px;
+    z-index: 10;
 }
 
+/* MARCO TIPO MÁSCARA PARA LA IMAGEN */
+.header-image-container {
+    position: relative;
+    width: 90%;
+    margin: 25px auto 15px auto;
+    height: 180px;
+    background-color: #fff;
+    /* Redondeado pronunciado para simular el marco de la captura */
+    border-radius: 30px; 
+    padding: 0; /* Espacio si quieres que se vea borde blanco alrededor, pero según la imagen va ajustado */
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+}
 
-/* BOTONS */
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Efecto de máscara/filtro para que el texto blanco resalte */
+    filter: brightness(0.8); 
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Kepler', serif;
+    font-size: 30px;
+    width: 85%;
+    text-align: center;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    pointer-events: none; /* Evita que el texto interfiera con clics */
+}
+
+/* INFO CONTENT - RESPONSIVO */
+.info-content {
+    padding: 15px 8%;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.info-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.info-text p {
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+/* SECTIONS (Coordinador / Participants) */
+.section-container {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-icon {
+    width: 24px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.section-header h3 {
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 18px;
+    color: #555;
+}
+
+.avatars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 40px;
+}
+
+.avatar-item {
+    text-align: center;
+    width: 65px;
+}
+
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #F5C143;
+    margin-bottom: 8px;
+    background-color: #eee;
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-item span {
+    font-size: 14px;
+    font-family: 'SourceSans-Bold', sans-serif;
+    white-space: nowrap;
+}
+
+.avatar-plus {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* BOTÓ - RESPONSIVO */
+.button-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.btn-inscriure {
+    background-color: #F5C143;
+    border: none;
+    border-radius: 20px; /* Redondeado más similar a la captura */
+    width: 100%;
+    padding: 16px;
+    font-family: 'SourceSans-Bold', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* BOTONS SUPERIOR */
 
 .flecha {
-    width: 5vw;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-image: url(../img/flecha-retro.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     float: left;
     margin: 25px;
-    z-index: 1000px;
+    z-index: 1000;
+    display: block;
+    position: relative;
 }
 
-/* BARRA MENÚ */
+/* BARRA MENÚ - NO TOCAR LOGICA */
 
 .barra {
     width: 100vw;
@@ -81,6 +254,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 2000;
 }
 
 .barra ul {
@@ -103,8 +277,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
-/* POSICIONES CONVERTIDAS A RESPONSIVE */
 
 .home {
     background-image: url(../img/home-groc.png);
@@ -138,24 +310,19 @@ body {
     left: 12%;
 }
 
-/* LÓGICA PARA LAS OTRAS PÁGINAS (ACTIVOS) */
-
-/* Pagina 2 - Grups */
+/* LÓGICA ACTIVOS */
 #pg2grups .barra { background-image: url(../img/fondmenu-grups.png); }
 #pg2grups .home { background-image: url(../img/home-groc.png); }
 #pg2grups .grups { background-image: url(../img/grups-blanc.png); }
 
-/* Pagina 3 - Panot */
 #pg3panot .barra { background-image: url(../img/fondmenu-panot.png); }
 #pg3panot .home { background-image: url(../img/home-groc.png); }
 #pg3panot .pannot { background-image: url(../img/panot-blanc.png); }
 
-/* Pagina 4 - Recursos */
 #pg4recursos .barra { background-image: url(../img/fondmenu-recursos.png); }
 #pg4recursos .home { background-image: url(../img/home-groc.png); }
 #pg4recursos .recursos { background-image: url(../img/recursos-blanc.png); }
 
-/* Pagina 5 - Perfil */
 #pg5perfil .barra { background-image: url(../img/fondmenu-perfil.png); }
 #pg5perfil .home { background-image: url(../img/home-groc.png); }
 #pg5perfil .perfil { background-image: url(../img/perfil-blanc.png); }
