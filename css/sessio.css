@@ -171,6 +171,7 @@ body {
     margin-bottom: 60px;
     align-items: center;
 }
+
 .button-group .btn { width: 270px; }
 
 .btn-full {
@@ -207,7 +208,7 @@ body {
 #step-3 .input-group { margin-bottom: 35px; }
 #step-3 .btn-full { height: 55px; }
 
-/* VENTANAS CON PERSONAJE (4, 5, 6, 7 y 8) */
+/* PAGINAS AMB PANOT (4, 5, 6, 7 y 8) */
 
 #step-4, #step-5, #step-6, #step-7, #step-8 {
     padding-bottom: 0; 
@@ -255,7 +256,7 @@ body {
 #step-6 .speech-bubble p,
 #step-7 .speech-bubble p,
 #step-8 .speech-bubble p {
-    font-family: 'Times New Roman', serif;
+    font-family: 'SourceSans-Regular', sans-serif;
     font-size: 19px;
     color: #000;
     line-height: 1.5;
@@ -269,7 +270,8 @@ body {
 #step-7 .speech-bubble strong,
 #step-8 .speech-bubble strong { 
     font-size: 23px; 
-    font-weight: bold; 
+    font-weight: bold;
+    font-family: 'Kepler';
 }
 
 /* BOTONES DENTRO DE LA NUBE (POSICIÓN FIJA) */
