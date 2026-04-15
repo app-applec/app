@@ -59,24 +59,19 @@ body {
     background-color: white;
     position: fixed;
     top: 15%;
-    border-radius: 40px 40px 0 0;
+    border-radius: 30px 30px 0 0;
     overflow-y: auto;
     padding-bottom: 120px;
     z-index: 10;
 }
 
-/* MARCO TIPO MÁSCARA PARA LA IMAGEN */
 .header-image-container {
     position: relative;
-    width: 90%;
-    margin: 25px auto 15px auto;
-    height: 180px;
-    background-color: #fff;
-    /* Redondeado pronunciado para simular el marco de la captura */
-    border-radius: 30px; 
-    padding: 0; /* Espacio si quieres que se vea borde blanco alrededor, pero según la imagen va ajustado */
+    width: 100%;
+    height: 30%;
+    border-radius: 30px 30px 0 0;
     overflow: hidden;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+    top: -5%;
 }
 
 .header-img {
@@ -84,26 +79,25 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    /* Efecto de máscara/filtro para que el texto blanco resalte */
-    filter: brightness(0.8); 
 }
 
 .header-title {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Kepler', serif;
-    font-size: 30px;
+    font-size: 34px;
     width: 85%;
     text-align: center;
     line-height: 1.1;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    pointer-events: none; /* Evita que el texto interfiera con clics */
+    pointer-events: none;
 }
 
-/* INFO CONTENT - RESPONSIVO */
+/* INFORMACIO */
+
 .info-content {
     padding: 15px 8%;
 }
@@ -116,7 +110,7 @@ body {
 
 .info-icon {
     width: 32px;
-    height: 32px;
+    height: 32%;
     margin-right: 20px;
     flex-shrink: 0;
 }
@@ -134,7 +128,8 @@ body {
     color: #000;
 }
 
-/* SECTIONS (Coordinador / Participants) */
+/* SECTIONS */
+
 .section-container {
     margin-bottom: 30px;
 }
@@ -143,12 +138,14 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    background-color: greenyellow;
 }
 
 .section-icon {
-    width: 24px;
+    width: 28px;
     margin-right: 15px;
     flex-shrink: 0;
+    background-color: red;
 }
 
 .section-header h3 {
@@ -207,6 +204,7 @@ body {
 }
 
 /* BOTÓ - RESPONSIVO */
+
 .button-container {
     margin: 20px 0;
     display: flex;
@@ -227,7 +225,7 @@ body {
     cursor: pointer;
 }
 
-/* BOTONS SUPERIOR */
+/* BOTON SUPERIOR */
 
 .flecha {
     width: 40px;
@@ -242,7 +240,7 @@ body {
     position: relative;
 }
 
-/* BARRA MENÚ - NO TOCAR LOGICA */
+/* BARRA MENÚ */
 
 .barra {
     width: 100vw;
@@ -310,7 +308,7 @@ body {
     left: 12%;
 }
 
-/* LÓGICA ACTIVOS */
+/* VINCULOS APARTATS */
 #pg2grups .barra { background-image: url(../img/fondmenu-grups.png); }
 #pg2grups .home { background-image: url(../img/home-groc.png); }
 #pg2grups .grups { background-image: url(../img/grups-blanc.png); }
