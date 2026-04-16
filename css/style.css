@@ -42,7 +42,7 @@ body {
     height: 22.8vw;
     background-image: url(../img/fondmenu-home.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%; /* Forzamos que el fondo ocupe todo el ancho */
+    background-size: 100% 100%;
     position: fixed;
     bottom: 0;
     left: 0;
