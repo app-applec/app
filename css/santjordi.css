@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    position: relative;
+}
+
 /* TIPOGRAFÍAS */
 
 @font-face {
@@ -58,7 +68,7 @@ body {
     height: 85vh;
     background-color: white;
     position: fixed;
-    top: 15%;
+    top: 13%;
     border-radius: 30px 30px 0 0;
     overflow-y: auto;
     padding-bottom: 120px;
@@ -100,6 +110,7 @@ body {
 
 .info-content {
     padding: 15px 8%;
+    top: -42px;
 }
 
 .info-item {
@@ -109,8 +120,8 @@ body {
 }
 
 .info-icon {
-    width: 32px;
-    height: 32%;
+    width: 30px;
+    height: 30%;
     margin-right: 20px;
     flex-shrink: 0;
 }
@@ -119,7 +130,7 @@ body {
     font-family: 'SourceSans-Bold', sans-serif;
     font-size: 18px;
     color: #555;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .info-text p {
@@ -131,27 +142,25 @@ body {
 /* SECTIONS */
 
 .section-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .section-header {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    background-color: greenyellow;
+    margin-bottom: 14px;
 }
 
 .section-icon {
     width: 28px;
     margin-right: 15px;
     flex-shrink: 0;
-    background-color: red;
 }
 
 .section-header h3 {
     font-family: 'SourceSans-Bold', sans-serif;
     font-size: 18px;
-    color: #555;
+    color: #4C4C4C;
 }
 
 .avatars {
@@ -186,6 +195,7 @@ body {
     font-size: 14px;
     font-family: 'SourceSans-Bold', sans-serif;
     white-space: nowrap;
+    color: #767676;
 }
 
 .avatar-plus {
@@ -201,28 +211,36 @@ body {
     font-size: 18px;
     color: #333;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    top: 2px;
 }
 
 /* BOTÓ - RESPONSIVO */
 
 .button-container {
-    margin: 20px 0;
+    margin: -10px 0;
     display: flex;
     justify-content: center;
-    padding: 0 5%;
+    padding: 0 15px;
+    width: 100%;  
 }
 
+.section-container {
+    margin-bottom: 20px;
+}
+
+/* 2. Ajustamos el botón para que sea más grande */
 .btn-inscriure {
     background-color: #F5C143;
     border: none;
-    border-radius: 20px; /* Redondeado más similar a la captura */
+    border-radius: 20px;
     width: 100%;
-    padding: 16px;
+    padding: 14px 0;
     font-family: 'SourceSans-Bold', sans-serif;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     font-size: 24px;
     color: white;
     cursor: pointer;
+    display: block;
 }
 
 /* BOTON SUPERIOR */
