@@ -2,10 +2,21 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #F5C143;
+    font-family: 'SourceSans-Regular', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 * {
     position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* TIPOGRAFÍAS */
@@ -40,20 +51,6 @@ body {
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #F5C143;
-    font-family: 'SourceSans-Regular', sans-serif;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 }
 
 .contenedor {

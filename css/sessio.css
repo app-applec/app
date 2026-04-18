@@ -233,8 +233,6 @@ body {
     z-index: 10;
 }
 
-/* TAMAÑO DE NUBE UNIFICADO PARA EVITAR SALTOS */
-
 #step-4 .speech-bubble,
 #step-5 .speech-bubble,
 #step-6 .speech-bubble,
@@ -273,8 +271,6 @@ body {
     font-weight: bold;
     font-family: 'Kepler';
 }
-
-/* BOTONES DENTRO DE LA NUBE (POSICIÓN FIJA) */
 
 /* Flechas (Pag 4, 7, 8) */
 
@@ -332,18 +328,18 @@ body {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 10px; /* Valor positivo para dar espacio real entre botones */
-    width: 90%; /* Ancho controlado para que no se salga de la nube */
+    gap: 10px;
+    width: 90%;
     padding: 0;
 }
 
 #step-6 .level-button-group .btn-role {
-    min-width: 40px; /* Botones más anchos */
-    padding: 10px 12px; /* Más relleno interno para que se vean más grandes */
+    min-width: 40px;
+    padding: 10px 12px;
     font-size: 14px;
     border-radius: 12px;
-    flex: 1; /* Esto hace que los 3 botones crezcan equitativamente */
-    max-width: 100px; /* Evita que crezcan demasiado en pantallas anchas */
+    flex: 1;
+    max-width: 100px;
 }
 
 /* PERSONAJE */
