@@ -36,7 +36,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #F5C144;
+    /* Ajuste de fondo bicolor */
+    background: linear-gradient(to bottom, #F5C144 50%, #FFFBEB 50%);
+    background-attachment: fixed;
     font-family: 'SourceSans-Regular', sans-serif;
 }
 
@@ -68,7 +70,7 @@ body {
     border-radius: 20px;
     float: right;
     margin: 25px;
-    padding: 5px 15px;
+    padding: 5px 10px 5px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,12 +82,22 @@ body {
     margin-right: 5px;
 }
 
+/* MONEDA */
+
+.coin-icon {
+    width: 27px;
+    height: 27px;
+    background-image: url(../img/icon-money.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /* PERFIL */
 
 .perfil-superior {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
@@ -102,7 +114,7 @@ body {
 .img-perfil {
     width: 165px; height: 165px;
     border-radius: 50%;
-    background-image: url(../img/raquel.png); /* Tu imagen aquí */
+    background-image: url(../img/raquel.jpg); 
     background-size: cover;
     background-position: center;
 }
@@ -110,7 +122,7 @@ body {
 .img-editar {
     width: 35px; height: 35px;
     background-color: white;
-    background-image: url(../img/icon-edit-pencil.png);
+    background-image: url(../img/lapiz-perfil.png);
     background-repeat: no-repeat;
     background-size: 60%;
     background-position: center;
@@ -127,13 +139,13 @@ body {
     background-color: white;
     width: 90%; margin: 0 auto 120px auto;
     border-radius: 30px;
-    padding: 30px 20px;
+    padding: 10px 20px 34px 20px;
     text-align: center;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
 }
 
 .label-mini {
-    font-family: 'SourseSans-Bold', sans-serif;
+    font-family: 'SourceSans-Bold', sans-serif;
     color: #A5A3A3;
     font-size: 12px;
     margin-bottom: 5px;
@@ -142,6 +154,7 @@ body {
 .label-mini.left {
     text-align: left;
     margin-top: 20px;
+    margin-left: 6%;
 }
 
 .user-name {
@@ -164,44 +177,68 @@ body {
 }
 
 .box-text {
-    border: 3px solid #f2c94c; border-radius: 20px;
-    padding: 15px; font-size: 14px; text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 3px solid #f2c94c;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.4;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
 }
 
 .dades-item {
-    display: flex; align-items: center; margin-bottom: 10px;
+    display:flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 6%;
 }
-.dades-item span { margin-left: 10px; font-size: 14px; }
+
+.dades-item span { 
+    margin-left: 10px; 
+    font-size: 15px;
+}
 
 /* ÍCONOS DATOS */
 
-.icon-tel, .icon-loc, .icon-mail {width: 20px; height: 20px; background-size: contain; background-repeat: no-repeat; }
-.icon-tel { background-image: url(../img/tel.png); }
-.icon-loc { background-image: url(../img/loc.png); }
-.icon-mail { background-image: url(../img/mail.png); }
+.icon-tel, .icon-loc, .icon-mail {
+    width: 20px;
+    height: 20px; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+
+.icon-tel { background-image: url(../img/telf-perfil.png); }
+.icon-loc { background-image: url(../img/ubi-perfil.png); }
+.icon-mail { background-image: url(../img/correo-perfil.png);}
 
 .box-progres {
+    width: 90%;
+    margin: 0 auto;
     border: 3px solid #FFBE06;
     border-radius: 20px;
     padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5%;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
 .panot-icon {
     width: 30px;
     height: 30px;
-    background-image: url(../img/panot-groc.png);
+    background-image: url(../img/panot-perfil.png);
     background-size: contain;
     background-repeat: no-repeat; }
 
-/* BARRA MENÚ */
+/* BARRA MENÚ - SIN TOCAR NADA DESDE AQUÍ */
 
 .barra {
     width: 100vw;
     height: 22.8vw;
-    background-image: url(../img/fondmenu-grups.png);
+    background-image: url(../img/fondmenu-perfil.png);
     background-repeat: no-repeat;
     background-size: 100% 100%; 
     position: fixed;
@@ -246,12 +283,11 @@ body {
 }
 
 .grups {
-    background-image: url(../img/grups-blanc.png);
+    background-image: url(../img/grups-groc.png);
 }
 
 .pannot {
     background-image: url(../img/panot-groc.png);
-
     height: 18.6vw !important;
     width: 18.6vw !important;
     margin-left: 3.5vw !important;
@@ -264,7 +300,7 @@ body {
 }
 
 .perfil {
-    background-image: url(../img/perfil-groc.png);
+    background-image: url(../img/perfil-blanc.png);
 }
 
 /* VINCULOS */
