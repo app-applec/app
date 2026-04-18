@@ -37,7 +37,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     height: 100%;
-    background: linear-gradient(to bottom, #F5C144 50%, #FFFBEB 50%);
+    background: linear-gradient(to bottom, #F5C144 50%, #FFFAEA 50%);
     background-attachment: fixed;
     font-family: 'SourceSans-Regular', sans-serif;
 }
@@ -180,7 +180,7 @@ body {
     width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
-    border: 3px solid #f2c94c;
+    border: 3px solid #FFBE06;
     border-radius: 20px;
     padding: 15px;
     font-size: 15px;
@@ -233,7 +233,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat; }
 
-/* BARRA MENÚ - SIN TOCAR NADA DESDE AQUÍ */
+/* BARRA MENÚ */
 
 .barra {
     width: 100vw;
