@@ -1,14 +1,20 @@
 const mapWindow = document.getElementById('mapWindow');
+const mapContent = document.getElementById('mapContent');
+
+// 1. CENTRAR EL MAPA AL CARGAR
+window.onload = () => {
+    // Calculamos el centro: (Ancho total - Ancho pantalla) / 2
+    const centerX = (mapContent.offsetWidth - window.innerWidth) / 2;
+    const centerY = (mapContent.offsetHeight - window.innerHeight) / 2;
+    
+    mapWindow.scrollLeft = centerX;
+    mapWindow.scrollTop = centerY;
+};
+
+// 2. LÓGICA DE ARRASTRE LIBRE
 let isDown = false;
 let startX, startY, scrollLeft, scrollTop;
 
-// Iniciar el mapa un poco movido para que no se vea una esquina
-window.onload = () => {
-    mapWindow.scrollLeft = 500;
-    mapWindow.scrollTop = 500;
-};
-
-// --- SOPORTE RATÓN ---
 mapWindow.addEventListener('mousedown', (e) => {
     isDown = true;
     mapWindow.style.cursor = 'grabbing';
@@ -27,15 +33,20 @@ mapWindow.addEventListener('mouseup', () => {
 mapWindow.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
+    
     const x = e.pageX - mapWindow.offsetLeft;
     const y = e.pageY - mapWindow.offsetTop;
-    const walkX = (x - startX); 
+    
+    // Calculamos cuánto se ha movido el ratón
+    const walkX = (x - startX);
     const walkY = (y - startY);
+    
+    // Movemos el scroll en ambas direcciones
     mapWindow.scrollLeft = scrollLeft - walkX;
     mapWindow.scrollTop = scrollTop - walkY;
 });
 
-// --- SOPORTE TÁCTIL (MÓVIL) ---
+// Soporte para móviles (Touch)
 mapWindow.addEventListener('touchstart', (e) => {
     isDown = true;
     startX = e.touches[0].pageX - mapWindow.offsetLeft;
@@ -54,12 +65,4 @@ mapWindow.addEventListener('touchmove', (e) => {
     const walkY = (y - startY);
     mapWindow.scrollLeft = scrollLeft - walkX;
     mapWindow.scrollTop = scrollTop - walkY;
-});
-
-// Click en marcador
-document.querySelectorAll('.marker').forEach(m => {
-    m.addEventListener('click', (e) => {
-        m.classList.toggle('active');
-        e.stopPropagation();
-    });
 });
