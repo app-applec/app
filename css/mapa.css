@@ -8,9 +8,8 @@ body {
     position: relative;
 }
 
-/* CODIGOS MAPA */
+/* MAPA */
 
-/* Reset básico para móvil */
 * {
     margin: 0;
     padding: 0;
@@ -27,9 +26,9 @@ body, html {
 .map-wrapper {
     width: 100vw;
     height: 100vh;
-    overflow: auto; /* Permite scroll horizontal y vertical */
+    overflow: auto;
     cursor: grab;
-    -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
 /* MAPA */
@@ -100,6 +99,50 @@ body, html {
     height: 18.6vw;
 }
 
+/* NUBE */
+
+.nube-aviso {
+    position: absolute;
+    top: 39%; 
+    left: 55.6%;
+    transform: translate(-50%, -130%); 
+    
+    background-color: #ff2222;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* PICO DE NUBE */
+
+.nube-aviso::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ff2222;
+}
+
+/* ANIMACIÓ */
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+.animacion-parpadeo {
+    animation: parpadeo 1.5s ease-in-out infinite;
+}
+
 /* ICONS MENU */
 
 .home {
@@ -148,33 +191,3 @@ body, html {
 #pg5perfil .barra { background-image: url(../img/fondmenu-perfil.png); }
 #pg5perfil .home { background-image: url(../img/home-groc.png); }
 #pg5perfil .perfil { background-image: url(../img/perfil-blanc.png); }
-
-/*
-
-<div class="contenedor">
-  <div class="contenido">
-    
-  </div>
-</div>
-
-* {
-  position: relative;
-}
-
-.contenedor {
-  width:100vw;
-  height: 100vh;
-  background-color: red;
-  overflow-X: visible;
-  overflow-Y: visible;
-}
-
-.contenido {
-  width:200vw;
-  height: 200vh;
-  top:-50vh;
-  left: -50vw;
-  background-image: url(https://images.pexels.com/photos/36928649/pexels-photo-36928649.jpeg?_gl=1*11twow1*_ga*MzczMjY5MDg3LjE3NzY0MzUwMTU.*_ga_8JE65Q40S6*czE3NzY0MzUwMTQkbzEkZzEkdDE3NzY0MzUwMjAkajU0JGwwJGgw);
-}
-
-*/
