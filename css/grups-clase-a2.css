@@ -165,7 +165,7 @@ body {
 
 .info-content {
     padding: 15px 12%;
-    top: 38px;
+    top: -4px;
 }
 
 .info-item {
@@ -183,7 +183,7 @@ body {
 
 .info-text h3 {
     font-family: 'SourceSans-Bold', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: #4C4C4C;
     margin-bottom: 12px;
 }
@@ -247,7 +247,7 @@ body {
 }
 
 .avatar-item span {
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'SourceSans-Bold', sans-serif;
     white-space: nowrap;
     color: #767676;
@@ -293,7 +293,7 @@ body {
     color: white;
     cursor: pointer;
     display: block;
-    top: 120px;
+    top: 122px;
 }
 
 /* BOTON SUPERIOR */
@@ -309,6 +309,52 @@ body {
     z-index: 1000;
     display: block;
     position: relative;
+}
+
+/* --- ESTILO ADICIONAL PARA IMAGEN 2 --- */
+
+/* Punto de estado online al lado de Nuria */
+.status-dot {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: 3px solid #F5C143; /* Círculo hueco dorado como en la imagen */
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.nivel-grup-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: -100px;
+    padding: 0 5px;
+}
+
+.nivel-grup-container h3 {
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.tag-nivel {
+    background-color: #F7CE6A;
+    color: black;
+    padding: 0.6em 1.2em;
+    border-radius: 30px;
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    min-width: 4.5em;
+}
+
+.btn-inscriure {
+    top: 138px !important;
 }
 
 /* BARRA MENÚ */
