@@ -71,6 +71,7 @@ body {
     z-index: 10;
 }
 
+
 /* BOTON SUPERIOR */
 
 .flecha {
@@ -84,6 +85,97 @@ body {
     z-index: 1000;
     display: block;
     position: relative;
+}
+
+/* CONTENIDO TARGETA */
+
+.juego-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.seccion-tiempo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.numero-15 {
+    font-size: 12vw;
+    font-weight: bold;
+    font-family: 'SourceSans-Bold', sans-serif;
+    margin-right: 10px;
+}
+
+.icono-reloj {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/relog-jocs.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contenedor-tarjeta {
+    width: 92%;
+    max-width: 450px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.tarjeta-blanca {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+.boton-habitacio {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 65px;
+    background-color: #F5C143;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 7vw;
+    max-font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contenedor-input {
+    width: 85%;
+    margin-top: 80px;
+}
+
+.input-juego {
+    width: 100%;
+    height: 55px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    padding: 0 20px;
+    font-size: 18px;
+    background-color: white;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 380px) {
+    .numero-15 { font-size: 40px; }
+    .boton-habitacio { height: 50px; font-size: 22px; }
+    .contenedor-input { margin-top: 60px; }
 }
 
 /* BARRA MENÚ */

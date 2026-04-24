@@ -1,45 +1,52 @@
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 * {
     position: relative;
-}
-
-/* MAPA */
-
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+html {
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: white;
 }
 
-.map-wrapper {
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    cursor: grab;
-    -webkit-overflow-scrolling: touch;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* MAPA */
 
-.mapax {
-    width: 150vw;
-    height: 150vh; 
-    background-image: url('../img/mapa.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+#mapamundi {
+    overflow: visible;
+
     position: relative;
+    top:0;
+    left:0;
+
+    width: 1172px;
+    height: 2693px; 
+    width: 586px;
+    height: 1346.5px; 
+}
+
+#mapamundicontainer {
+    position: relative;
+
+    overflow: visible;
+
+    transform: translate(-50%, -50%);
+    transform: scale(200%, 200%);
+ 
+    width: 1172px;
+    height: 2693px; 
+
+    background-image: url('../img/mapa.png');
+    background-size: 586px;
+    background-repeat: no-repeat;
+
 }
 
 /* ICON CIRCLE */
@@ -69,6 +76,7 @@ body, html {
     left: 0;
     right: 0;
     z-index: 9999;
+    overflow: hidden;
 }
 
 .barra ul {
@@ -106,7 +114,6 @@ body, html {
     top: 39%; 
     left: 55.6%;
     transform: translate(-50%, -130%); 
-    
     background-color: #ff2222;
     color: white;
     padding: 7px 14px;
