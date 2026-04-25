@@ -74,15 +74,15 @@ span {
 }
 
 .contenedor-chat {
-  background-color: #FFFDF1; /* Color crema del fondo */
+  background-color: #FFFDF1;
   border-radius: 40px 40px 0 0;
   margin-top: 40px;
   height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; /* Distribuye elementos para mejor uso del espacio */
-  padding: 5vh 6vw 15vh 6vw; /* Aumentado padding inferior para no pisar el menú */
+  justify-content: space-around;
+  padding: 5vh 6vw 15vh 6vw;
   z-index: 1;
 }
 
@@ -99,7 +99,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 60px 80px 60px; /* Ajustados paddings internos */
+  padding: 40px 60px 80px 60px;
   margin-top: -2vh;
 }
 
@@ -216,6 +216,7 @@ span {
 }
 
 /* VINCULOS PÁGINAS */
+
 #pg2grups .barra { background-image: url(../img/fondmenu-grups.png); }
 #pg2grups .home { background-image: url(../img/home-groc.png); }
 #pg2grups .grups { background-image: url(../img/grups-blanc.png); }

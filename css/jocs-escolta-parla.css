@@ -57,6 +57,60 @@ body {
     display: block;
 }
 
+
+/* CONTROLES DE AUDIO */
+
+.controles-audio {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 6vh;
+    position: relative;
+    padding: 0 10%;
+}
+
+.icon-pausa {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+.icon-repetir {
+    width: 32px;
+    height: auto;
+    display: block;
+    position: absolute;
+    right: -1%;
+}
+
+@media (max-height: 600px) {
+    .controles-audio {
+        margin-top: 3vh;
+    }
+}
+
+/* PALABRA AUDIO */
+
+.contenedor-frase {
+    width: 100%;
+    margin-top: -10vh;
+    padding: 0 10px;
+    text-align: center;
+    top: 20vh;
+}
+
+.texto-juego {
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 20px;
+    color: black;
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* BOTÓ MICROFONO */
+
 .seccion-grabacion {
     width: 100%;
     display: flex;
