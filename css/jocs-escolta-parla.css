@@ -19,6 +19,29 @@ body {
     padding: 0;
 }
 
+
+.zona-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 42px;
+}
+
+.tarjeta-blanca {
+    width: 90%;
+    max-width: 420px;
+    aspect-ratio: 11/15;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
 /* TIPOGRAFÍAS */
 
 @font-face {
