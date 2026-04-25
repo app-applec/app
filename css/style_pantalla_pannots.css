@@ -73,31 +73,29 @@ h3 {
                 #ppannot9 .pannnot {background-image: url(../img/seccio_pannot/pannot_caballero.png);}
                       
 
-    .coin {
-        width: 70px;
-        height: 100px;
-        float: right;
-        margin-left: 100px;
-        margin-right: 15px;
-    }
+.coin {
+    width: 70px;
+    height: 100px;
+    float: right;
+    margin-left: 100px;
+    margin-right: 15px;
+}
 
-        .moneda {
-            width: 100%;
-            height: 70%;
-            border-radius: 100%;
-            background-image: url(../img/coin.png);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            box-shadow: 0px 0px 3px grey;
-        }
+.moneda {
+    width: 100%;
+    height: 70%;
+    border-radius: 100%;
+    background-image: url(../img/coin.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 0px 0px 3px grey;
+}
 
-        .cantidad {
-            width: 100%;
-            height: 30%;
-            text-align: center;
-
-        }
-
+.cantidad {
+     width: 100%;
+     height: 30%;
+    text-align: center;
+}
 
 .mini_pannots {
     width: 25vw;
