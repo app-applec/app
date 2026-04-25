@@ -129,6 +129,19 @@ body {
     align-items: center;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
     flex-shrink: 0;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.contenedor-microfono:active {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra interna/suave */
+    transform: scale(0.96); /* Se hunde un poco */
+}
+
+/* Al tocar: El micro cambia a negro automáticamente */
+.contenedor-microfono:active .icon-microfono {
+    filter: invert(1); 
 }
 
 @media (max-height: 650px) {
