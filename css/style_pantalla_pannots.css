@@ -63,14 +63,14 @@ h3 {
     background-size: 150%;
 }
 
-                #ppannot2 .pannnot {background-image: url(../img/seccio_pannot/pannot_chica.png);}
-                #ppannot3 .pannnot {background-image: url(../img/seccio_pannot/pannot_barça.png);}
-                #ppannot4 .pannnot {background-image: url(../img/seccio_pannot/pannot_hipster.png);}
-                #ppannot5 .pannnot {background-image: url(../img/seccio_pannot/pannot_cowboy.png);}
-                #ppannot6 .pannnot {background-image: url(../img/seccio_pannot/pannot_dragon.png);}
-                #ppannot7 .pannnot {background-image: url(../img/seccio_pannot/pannot_rosa.png);}
-                #ppannot8 .pannnot {background-image: url(../img/seccio_pannot/pannot_castañera.png);}
-                #ppannot9 .pannnot {background-image: url(../img/seccio_pannot/pannot_caballero.png);}
+#ppannot2 .pannnot {background-image: url(../img/seccio_pannot/pannot_chica.png);}
+#ppannot3 .pannnot {background-image: url(../img/seccio_pannot/pannot_barca.png);}
+#ppannot4 .pannnot {background-image: url(../img/seccio_pannot/pannot_hipster.png);}
+#ppannot5 .pannnot {background-image: url(../img/seccio_pannot/pannot_cowboy.png);}
+#ppannot6 .pannnot {background-image: url(../img/seccio_pannot/pannot_dragon.png);}
+#ppannot7 .pannnot {background-image: url(../img/seccio_pannot/pannot_rosa.png);}
+#ppannot8 .pannnot {background-image: url(../img/seccio_pannot/pannot_castanera.png);}
+#ppannot9 .pannnot {background-image: url(../img/seccio_pannot/pannot_caballero.png);}
                       
 
 .coin {
