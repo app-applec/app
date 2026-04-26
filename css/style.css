@@ -70,24 +70,24 @@ body {
 .logo {
     width: 40vw;
     height: 40vw;
-    max-width: 180px;;
+    max-width: 180px;
     background-image: url('../img/logo-panot.svg');
     background-size: cover;
     margin-top: 5vh;
 }
 
 .logo-small {
-    width: 40vw;
-    height: 40vw;
+    width: 25vw; /* Reducido para dejar más espacio al formulario */
+    height: 25vw;
+    max-width: 120px;
     background-image: url('../img/logo-panot.svg');
     background-size: cover;
-    margin-top: 5vh;
+    margin-top: 2vh; /* Reducido para que no empuje todo abajo */
     border-radius: 25px;
 }
 
 .main-title {
-    font-size: 16vw;
-    max-font-size: 62px;
+    font-size: clamp(40px, 16vw, 62px); /* Dinámico: entre 40px y 62px */
     color: #EC001B;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
     font-family: 'Kepler';
@@ -96,7 +96,7 @@ body {
 }
 
 .subtitle {
-    font-size: 5.3vw;
+    font-size: clamp(16px, 5.3vw, 22px);
     color: #630100;
     font-weight: 300;
     font-family: 'SourceSans-Regular', sans-serif;
@@ -111,14 +111,14 @@ body {
 .form-title-serif {
     font-family: 'Kepler';
     font-weight: bold;
-    font-size: 58px;
+    font-size: clamp(32px, 12vw, 58px); /* El título se adapta al móvil */
     color: #000;
     text-align: center;
     line-height: 0.9;
     text-transform: uppercase;
 }
 
-/*  FORMULARIOS */
+/* FORMULARIOS */
 
 .custom-form {
     width: 100%;
@@ -130,28 +130,30 @@ body {
 
 .input-group {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
 }
 
 .input-group label {
     font-family: 'SourceSans-Regular', sans-serif;
-    font-size: 14px;
+    font-size: clamp(13px, 3.5vw, 16px);
     font-weight: bold;
     color: #333;
-    margin-bottom: 6px;
+    margin-bottom: 1vh;
     display: block;
     margin-left: 5px;
 }
 
 .input-group input {
     width: 100%;
-    height: 45px;
+    height: 6.5vh; /* Altura adaptativa */
+    min-height: 45px;
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     background-color: #FFFFFF;
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0 20px;
     outline: none;
+    font-size: 16px;
 }
 
 /* BOTONES GENERALES */
@@ -159,7 +161,7 @@ body {
 .btn {
     background-color: #F5C143;
     color: #FFFFFF;
-    font-size: 26px;
+    font-size: clamp(20px, 6vw, 26px);
     font-family: 'SourceSans-Bold', sans-serif;
     border: none;
     border-radius: 20px;
@@ -181,42 +183,51 @@ body {
 }
 
 .button-group .btn { 
-    width: 270px;
+    width: 100%; /* Mejor adaptabilidad */
+    max-width: 270px;
 }
 
 .btn-full {
     width: 100%;
     margin-top: auto;
-    margin-bottom: 40px;
+    margin-bottom: 4vh;
 }
 
-/* 1. INICI DE SESSIÓ (#step-2) */
+/* =======================================================
+   1. INICI DE SESSIÓ (#step-2) 
+   (Sustituidos los px fijos por vh para que no se salga de pantalla)
+   ======================================================= */
 
 #step-2 .form-title-serif {
-    margin-top: 40px;
+    margin-top: 2vh; /* Antes 40px */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#step-2 .custom-form { margin-top: 90px; }
-#step-2 .input-group input { height: 74px; }
-#step-2 .input-group { margin-bottom: 25px; }
-#step-2 .forgot-password { margin-top: -10px; margin-bottom: 10px; text-align: center; color: #B19146; font-size: 13px; }
-#step-2 .btn-full { height: 65px; }
+#step-2 .custom-form { margin-top: 4vh; } /* Antes 90px (esto rompía todo) */
+#step-2 .input-group input { height: 7vh; min-height: 50px; } /* Antes 74px */
+#step-2 .input-group { margin-bottom: 2.5vh; } /* Antes 25px */
+#step-2 .forgot-password { margin-top: 0; margin-bottom: 2vh; text-align: center; color: #B19146; font-size: 13px; }
+#step-2 .btn-full { height: 8vh; min-height: 55px; } /* Antes 65px */
 
-/* 2. REGISTRA'T (#step-3) */
+/* =======================================================
+   2. REGISTRA'T (#step-3)
+   (Misma corrección de px a unidades relativas)
+   ======================================================= */
 
 #step-3 .large-title {
-    font-size: 58px;
+    font-size: clamp(32px, 12vw, 58px);
     text-align: left;
-    margin-top: 60px;
+    margin-top: 6vh; /* Antes 60px */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
-#step-3 .custom-form { margin-top: 45px; }
-#step-3 .input-group input { height: 42px; }
-#step-3 .input-group { margin-bottom: 35px; }
-#step-3 .btn-full { height: 55px; }
+#step-3 .custom-form { margin-top: 3vh; } /* Antes 45px */
+#step-3 .input-group input { height: 6vh; min-height: 42px; } /* Antes 42px */
+#step-3 .input-group { margin-bottom: 2.5vh; } /* Antes 35px */
+#step-3 .btn-full { height: 8vh; min-height: 55px; } /* Antes 55px */
 
-/* PAGINAS AMB PANOT (4, 5, 6, 7 y 8) */
+/* =======================================================
+   PAGINAS AMB PANOT (4, 5, 6, 7 y 8) 
+   ======================================================= */
 
 #step-4, #step-5, #step-6, #step-7, #step-8 {
     padding-bottom: 0; 
@@ -237,7 +248,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 230px; 
+    top: 28vh; /* Convertido de 230px a vh para evitar cortes */
     z-index: 10;
 }
 
@@ -250,8 +261,8 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 250px; 
-    padding: 55px 35px 105px 76px; 
+    min-height: 30vh; /* Convertido de 250px a vh */
+    padding: 6vh 8vw 12vh 18vw; /* Proporcional a la nube */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -263,11 +274,11 @@ body {
 #step-7 .speech-bubble p,
 #step-8 .speech-bubble p {
     font-family: 'SourceSans-Regular', sans-serif;
-    font-size: 19px;
+    font-size: clamp(16px, 4.5vw, 19px);
     color: #000;
     line-height: 1.5;
     text-align: left;
-    margin-left: -24px;
+    margin-left: -5vw;
 }
 
 #step-4 .speech-bubble strong,
@@ -275,7 +286,7 @@ body {
 #step-6 .speech-bubble strong,
 #step-7 .speech-bubble strong,
 #step-8 .speech-bubble strong { 
-    font-size: 23px; 
+    font-size: clamp(18px, 5.5vw, 23px); 
     font-weight: bold;
     font-family: 'Kepler';
 }
@@ -286,10 +297,12 @@ body {
 #step-7 .btn-next-arrow,
 #step-8 .btn-next-arrow {
     position: absolute;
-    right: 34px; 
-    bottom: 54px; 
-    width: 50px;
-    height: 50px;
+    right: 8vw; 
+    bottom: 6vh; 
+    width: 12vw;
+    height: 12vw;
+    max-width: 50px;
+    max-height: 50px;
     background-color: #F5C143;
     border-radius: 50%;
     border: none;
@@ -299,20 +312,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-.btn-next-arrow img { width: 30px; }
+.btn-next-arrow img { width: 60%; }
 
 /* Grupos de botones generales */
 
 .role-button-group, .level-button-group {
     position: absolute;
-    bottom: 54px;
+    bottom: 6vh;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     gap: 15px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 5vw;
 }
 
 .btn-role {
@@ -322,16 +335,16 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 15px;
-    padding: 10px 15px;
+    padding: 1.5vh 3vw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     min-width: 100px;
-    font-size: 14px;
+    font-size: clamp(12px, 3.5vw, 14px);
 }
 
 /* AJUSTE ESPECÍFICO PÁGINA 6: BOTONES Y ESPACIADO CORREGIDO */
 
 #step-6 .level-button-group {
-    bottom: 55px; /* Subido para que quede bien centrado en el área blanca */
+    bottom: 6vh; /* Subido para que quede bien centrado en el área blanca */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -343,8 +356,8 @@ body {
 
 #step-6 .level-button-group .btn-role {
     min-width: 40px;
-    padding: 10px 12px;
-    font-size: 14px;
+    padding: 1vh 2vw;
+    font-size: clamp(12px, 3.5vw, 14px);
     border-radius: 12px;
     flex: 1;
     max-width: 100px;
@@ -367,5 +380,5 @@ body {
     width: 125%; 
     max-width: 500px; 
     height: auto;
-    margin-bottom: -15px; 
+    margin-bottom: -2vh; 
 }
