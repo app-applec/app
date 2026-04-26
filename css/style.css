@@ -192,13 +192,6 @@ body {
 
 /* 1. INICI DE SESSIÓ (#step-2) */
 
-#step-2 .logo-small {
-    width: 25vw;        /* Reducimos un poco el logo para dejar espacio al formulario */
-    height: 25vw;
-    max-width: 100px;
-    margin-top: 2vh;    /* Margen superior pequeño y proporcional */
-}
-
 #step-2 .form-title-serif {
     margin-top: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
