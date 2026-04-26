@@ -1,5 +1,6 @@
 /* TIPOGRAFÍAS */
 
+
 @font-face {
     font-family: 'Kepler';
     src: url('../fonts/KeplerStdBold.woff') format('woff');
@@ -7,6 +8,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 
 @font-face {
     font-family: 'Kepler';
@@ -16,6 +18,7 @@
     font-display: swap;
 }
 
+
 @font-face {
     font-family: 'SourceSans-Bold';
     src: url('../fonts/SourceSans3-Bold.woff') format('woff');
@@ -23,6 +26,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 
 @font-face {
     font-family: 'SourceSans-Regular';
@@ -32,19 +36,22 @@
     font-display: swap;
 }
 
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
+
+body {
     background-color: #FFFAEA;
     font-family: 'SourceSans-Regular', sans-serif;
-    height: 100%;
-    height: 100dvh; /* Altura dinámica para móviles */
-    overflow: hidden; /* Bloquea el scroll general */
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
 }
+
 
 #app-container {
     width: 100%;
@@ -53,80 +60,82 @@ html, body {
     margin: 0 auto;
 }
 
-/* PANTALLAS Y SCROLL GENERAL */
+
 .screen {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     height: 100%;
     padding: 4vh 8vw;
-    overflow-y: auto; /* Scroll habilitado por pantalla */
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
 }
 
-.screen::-webkit-scrollbar { display: none; }
-.screen { -ms-overflow-style: none; scrollbar-width: none; }
 
 .screen.active {
     display: flex;
 }
 
+
 /* LOGOS Y TÍTULOS GENERALES */
+
 
 .logo {
     width: 40vw;
     height: 40vw;
-    max-width: 180px;
+    max-width: 180px;;
     background-image: url('../img/logo-panot.svg');
     background-size: cover;
     margin-top: 5vh;
 }
 
+
 .logo-small {
-    width: 25vw; 
-    height: 25vw;
-    max-width: 120px;
+    width: 40vw;
+    height: 40vw;
     background-image: url('../img/logo-panot.svg');
     background-size: cover;
-    margin-top: 2vh; 
+    margin-top: 5vh;
     border-radius: 25px;
 }
 
+
 .main-title {
-    font-size: clamp(40px, 16vw, 62px); 
+    font-size: 16vw;
+    max-font-size: 62px;
     color: #EC001B;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-family: 'Kepler';
     margin-top: 2vh;
     text-align: center;
 }
 
+
 .subtitle {
-    font-size: clamp(16px, 5.3vw, 22px);
+    font-size: 5.3vw;
     color: #630100;
     font-weight: 300;
     font-family: 'SourceSans-Regular', sans-serif;
     text-align: center;
-    margin-top: 4vh; 
+    margin-top: 4vh;
     line-height: 1.2;
     flex-grow: 1;
     display: flex;
     align-items: center;
 }
 
+
 .form-title-serif {
     font-family: 'Kepler';
     font-weight: bold;
-    font-size: clamp(32px, 12vw, 58px); 
+    font-size: 58px;
     color: #000;
     text-align: center;
     line-height: 0.9;
     text-transform: uppercase;
 }
 
-/* FORMULARIOS (Funciona perfecto) */
+
+/*  FORMULARIOS */
+
 
 .custom-form {
     width: 100%;
@@ -136,40 +145,43 @@ html, body {
     flex-grow: 1;
 }
 
+
 .input-group {
     width: 100%;
-    margin-bottom: 2vh;
+    margin-bottom: 10px;
 }
+
 
 .input-group label {
     font-family: 'SourceSans-Regular', sans-serif;
-    font-size: clamp(13px, 3.5vw, 16px);
+    font-size: 14px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 1vh;
+    margin-bottom: 6px;
     display: block;
     margin-left: 5px;
 }
 
+
 .input-group input {
     width: 100%;
-    height: 6.5vh; 
-    min-height: 45px;
+    height: 45px;
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     background-color: #FFFFFF;
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0 20px;
     outline: none;
-    font-size: 16px;
 }
 
+
 /* BOTONES GENERALES */
+
 
 .btn {
     background-color: #F5C143;
     color: #FFFFFF;
-    font-size: clamp(20px, 6vw, 26px);
+    font-size: 26px;
     font-family: 'SourceSans-Bold', sans-serif;
     border: none;
     border-radius: 20px;
@@ -179,6 +191,7 @@ html, body {
     min-height: 55px;
     transition: transform 0.2s;
 }
+
 
 .button-group {
     display: flex;
@@ -190,113 +203,132 @@ html, body {
     width: 100%;
 }
 
-.button-group .btn { 
-    width: 100%; 
-    max-width: 270px;
+
+.button-group .btn {
+    width: 270px;
 }
+
 
 .btn-full {
     width: 100%;
     margin-top: auto;
-    margin-bottom: 4vh;
+    margin-bottom: 40px;
 }
+
 
 /* 1. INICI DE SESSIÓ (#step-2) */
 
+
 #step-2 .form-title-serif {
-    margin-top: 2vh; 
+    margin-top: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-#step-2 .custom-form { margin-top: 4vh; } 
-#step-2 .input-group input { height: 7vh; min-height: 50px; } 
-#step-2 .input-group { margin-bottom: 2.5vh; } 
-#step-2 .forgot-password { margin-top: 0; margin-bottom: 2vh; text-align: center; color: #B19146; font-size: 13px; }
-#step-2 .btn-full { height: 8vh; min-height: 55px; } 
+
+
+#step-2 .custom-form { margin-top: 90px; }
+#step-2 .input-group input { height: 74px; }
+#step-2 .input-group { margin-bottom: 25px; }
+#step-2 .forgot-password { margin-top: -10px; margin-bottom: 10px; text-align: center; color: #B19146; font-size: 13px; }
+#step-2 .btn-full { height: 65px; }
+
 
 /* 2. REGISTRA'T (#step-3) */
 
-#step-3 .large-title {
-    font-size: clamp(32px, 12vw, 58px);
-    text-align: left;
-    margin-top: 6vh; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-}
-#step-3 .custom-form { 
-    margin-top: 3vh; 
-    padding-bottom: 12vh;
-} 
-#step-3 .input-group input { height: 6vh; min-height: 42px; } 
-#step-3 .input-group { margin-bottom: 2.5vh; } 
-#step-3 .btn-full { height: 8vh; min-height: 55px; margin-top: 3vh; } 
 
-/* ======================================================================
-   PÁGINAS CON PANOT (4, 5, 6, 7 y 8) - REDISEÑADO
-   ====================================================================== */
+#step-3 .large-title {
+    font-size: 58px;
+    text-align: left;
+    margin-top: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#step-3 .custom-form { margin-top: 45px; }
+#step-3 .input-group input { height: 42px; }
+#step-3 .input-group { margin-bottom: 35px; }
+#step-3 .btn-full { height: 55px; }
+
+
+/* PAGINAS AMB PANOT (4, 5, 6, 7 y 8) */
+
 
 #step-4, #step-5, #step-6, #step-7, #step-8 {
-    padding-top: 3vh; 
-    padding-bottom: 0; 
+    padding-bottom: 0;
     justify-content: flex-start;
-    align-items: center;
     position: relative;
-    overflow: hidden; /* Bloqueamos scroll aquí para fijar la imagen */
+    overflow: hidden;
     height: 100%;
 }
 
+
 .logo-faded {
     opacity: 0.35;
-    width: 20vw;
-    height: 20vw;
-    max-width: 80px;
-    margin-top: 0;
+    margin-top: 1vh;
 }
 
-/* NUBE DE TEXTO (Flujo natural relativo al logo) */
+
 .speech-container {
-    width: 88%; 
-    max-width: 350px; 
-    margin-top: 3vh; /* Espaciado fluido, sin position: absolute */
-    position: relative;
+    width: 100%;
+    max-width: 380px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 230px;
     z-index: 10;
 }
 
-.speech-bubble {
+
+#step-4 .speech-bubble,
+#step-5 .speech-bubble,
+#step-6 .speech-bubble,
+#step-7 .speech-bubble,
+#step-8 .speech-bubble {
     background-image: url('../img/nube-sessio.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 190px; 
-    /* El padding bottom es muy amplio (75px) para asegurar que la cola 
-       de la nube quede por fuera del área de contenido */
-    padding: 30px 25px 75px 25px; 
+    min-height: 250px;
+    padding: 55px 35px 105px 76px;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.speech-bubble p {
+
+#step-4 .speech-bubble p,
+#step-5 .speech-bubble p,
+#step-6 .speech-bubble p,
+#step-7 .speech-bubble p,
+#step-8 .speech-bubble p {
     font-family: 'SourceSans-Regular', sans-serif;
-    font-size: clamp(14px, 4.5vw, 17px); 
+    font-size: 19px;
     color: #000;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: left;
-    margin-bottom: 10px; /* Separación con los botones */
+    margin-left: -24px;
 }
 
-.speech-bubble strong { 
-    font-size: clamp(16px, 4.8vw, 19px); 
+
+#step-4 .speech-bubble strong,
+#step-5 .speech-bubble strong,
+#step-6 .speech-bubble strong,
+#step-7 .speech-bubble strong,
+#step-8 .speech-bubble strong {
+    font-size: 23px;
     font-weight: bold;
     font-family: 'Kepler';
 }
 
-/* FLECHAS DENTRO DE LA NUBE */
-.btn-next-arrow {
+
+/* Flechas (Pag 4, 7, 8) */
+
+
+#step-4 .btn-next-arrow,
+#step-7 .btn-next-arrow,
+#step-8 .btn-next-arrow {
     position: absolute;
-    right: 25px; 
-    bottom: 25px; /* Calculado perfecto para asomar justo arriba de la cola */
-    width: 45px; 
-    height: 45px;
+    right: 34px;
+    bottom: 54px;
+    width: 50px;
+    height: 50px;
     background-color: #F5C143;
     border-radius: 50%;
     border: none;
@@ -306,20 +338,24 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-.btn-next-arrow img { width: 22px; }
+.btn-next-arrow img { width: 30px; }
 
-/* GRUPO DE BOTONES FLEXIBLES DENTRO DE LA NUBE */
+
+/* Grupos de botones generales */
+
+
 .role-button-group, .level-button-group {
     position: absolute;
-    bottom: 28px; /* Fija los botones de forma segura sobre la cola de la nube */
+    bottom: 54px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 8px; /* Espaciado ajustado */
-    width: 85%; /* No llegan al borde de la imagen */
-    padding: 0;
+    gap: 15px;
+    width: 100%;
+    padding: 0 20px;
 }
+
 
 .btn-role {
     background-color: #F5C143;
@@ -327,44 +363,57 @@ html, body {
     font-family: 'SourceSans-Bold', sans-serif;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
-    padding: 12px 5px; 
+    border-radius: 15px;
+    padding: 10px 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    flex: 1; /* Esto es la magia: se estiran y encogen para caber siempre */
-    font-size: clamp(11px, 3.5vw, 14px); 
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
+    min-width: 100px;
+    font-size: 14px;
 }
 
-/* AJUSTE ESPECÍFICO PÁGINA 6: 3 BOTONES (BAIX, MIG, ALT) */
+
+/* AJUSTE ESPECÍFICO PÁGINA 6: BOTONES Y ESPACIADO CORREGIDO */
+
+
 #step-6 .level-button-group {
-    gap: 5px; 
+    bottom: 55px; /* Subido para que quede bien centrado en el área blanca */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     width: 90%;
-}
-#step-6 .btn-role {
-    padding: 10px 2px; 
-    font-size: clamp(10px, 3vw, 12px);
-    border-radius: 8px;
+    padding: 0;
 }
 
-/* ======================================================================
-   PERSONAJE (PANOT) FIJADO ABAJO
-   ====================================================================== */
+
+#step-6 .level-button-group .btn-role {
+    min-width: 40px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 12px;
+    flex: 1;
+    max-width: 100px;
+}
+
+
+/* PERSONAJE */
+
+
 .character-container {
     position: absolute;
-    bottom: -2vh; /* Un poco por debajo del límite para esconder recortes */
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     display: flex;
     justify-content: center;
-    pointer-events: none;
-    z-index: 5; /* Queda POR DETRÁS de la nube */
+    line-height: 0;
 }
 
-.character-img { 
-    height: clamp(250px, 42vh, 400px); /* Altura elástica que se adapta a cualquier móvil */
-    width: auto; 
-    object-fit: contain;
-    object-position: bottom;
+
+.character-img {
+    width: 125%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: -15px;
 }
