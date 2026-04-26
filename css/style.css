@@ -68,8 +68,8 @@ body {
 /* LOGOS Y TÍTULOS GENERALES */
 
 .logo {
-    width: 44vw;
-    height: 44vw;
+    width: 40vw;
+    height: 40vw;
     max-width: 180px;;
     background-image: url('../img/logo-panot.svg');
     background-size: cover;
@@ -77,11 +77,11 @@ body {
 }
 
 .logo-small {
-    width: 165px;
-    height: 165px;
+    width: 40vw;
+    height: 40vw;
     background-image: url('../img/logo-panot.svg');
     background-size: cover;
-    margin-top: 50px;
+    margin-top: 5vh;
     border-radius: 25px;
 }
 
