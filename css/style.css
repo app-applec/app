@@ -87,10 +87,11 @@ body {
 
 .main-title {
     font-size: 16vw;
+    max-font-size: 62px;
     color: #EC001B;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
     font-family: 'Kepler';
-    margin-top: 15px;
+    margin-top: 2vh;
     text-align: center;
 }
 
