@@ -87,7 +87,8 @@ span {
 }
 
 .nube-sessio {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   max-width: 90vw;
   height: auto;
   margin: 0 auto;
@@ -111,7 +112,8 @@ span {
 }
 
 .personaje-panot {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   max-width: 400px;
   margin-top: -10vh;
   margin-bottom: -5vh;
@@ -143,7 +145,7 @@ span {
   font-size: 20px;
   color: #888;
   background-color: white;
-  box-shadow: inset 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 4px 10px rgba(0,0,0,0.1); 
   outline: none;
 }
 
@@ -190,10 +192,13 @@ span {
   height: 18.6vw;
 }
 
-/* ICONOS MENU */
+/* ICONS MENU */
 
-.home { background-image: url(../img/home-groc.png); }
-.grups { background-image: url(../img/grups-groc.png); }
+.home { background-image: url(../img/home-groc.png);
+}
+
+.grups { background-image: url(../img/grups-groc.png);
+}
 
 .pannot {
   background-image: url(../img/panot-blanc.png);
@@ -204,10 +209,13 @@ span {
   top: -3vw;
 }
 
-.recursos { background-image: url(../img/recursos-groc.png); }
-.perfil { background-image: url(../img/perfil-groc.png); }
+.recursos { background-image: url(../img/recursos-groc.png);
+}
 
-/* VÍNCULOS PÁGINAS */
+.perfil { background-image: url(../img/perfil-groc.png);
+}
+
+/* VINCULOS PÁGINAS */
 
 #pg2grups .barra { background-image: url(../img/fondmenu-grups.png); }
 #pg2grups .home { background-image: url(../img/home-groc.png); }
@@ -224,160 +232,3 @@ span {
 #pg5perfil .barra { background-image: url(../img/fondmenu-perfil.png); }
 #pg5perfil .home { background-image: url(../img/home-groc.png); }
 #pg5perfil .perfil { background-image: url(../img/perfil-blanc.png); }
-
-/* =============================================
-   ADAPTACIÓN MÓVIL (hasta 768px de ancho)
-   ============================================= */
-@media (max-width: 768px) {
-
-  .cabecera {
-    padding: 0 5vw;
-    top: 20px;
-    height: auto;
-  }
-
-  .cabecera span {
-    font-size: clamp(24px, 7vw, 36px);
-  }
-
-  .gancho {
-    width: 38px;
-    height: 38px;
-  }
-
-  .contenedor-chat {
-    margin-top: 20px;
-    height: auto;
-    min-height: 100vh;
-    padding: 3vh 5vw 120px 5vw;
-    justify-content: flex-start;
-    gap: 2vh;
-    border-radius: 30px 30px 0 0;
-  }
-
-  .nube-sessio {
-    width: 100%;
-    max-width: 100%;
-    min-height: 200px;
-    height: auto;
-    padding: 30px 25px 60px 25px;
-    margin-top: 0;
-    background-size: 100% 100%;
-  }
-
-  .nube-sessio p {
-    font-size: clamp(18px, 5vw, 28px);
-  }
-
-  .personaje-panot {
-    max-width: 250px;
-    width: 70vw;
-    margin-top: -5vh;
-    margin-bottom: 0;
-  }
-
-  .buscador-inferior {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    max-width: 100%;
-    margin: 2vh 0;
-    z-index: 10;
-  }
-
-  .buscador-inferior input {
-    font-size: 16px;
-    padding: 16px 20px;
-    border-radius: 16px;
-  }
-
-  .barra {
-    height: auto;
-    min-height: 70px;
-    background-size: 100% 100%;
-    padding: 10px 0 15px 0;
-  }
-
-  .barra ul {
-    width: 95vw;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .barra li {
-    float: none;
-    width: 13vw;
-    height: 13vw;
-    min-width: 44px;
-    min-height: 44px;
-    margin: 0;
-  }
-
-  .pannot {
-    width: 16vw !important;
-    height: 16vw !important;
-    min-width: 50px;
-    min-height: 50px;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    top: 0;
-  }
-
-  .barra li a {
-    width: 100%;
-    height: 100%;
-  }
-
-  html, body {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-  }
-}
-
-/* =============================================
-   PANTALLAS MUY PEQUEÑAS (< 400px)
-   ============================================= */
-@media (max-width: 400px) {
-
-  .nube-sessio {
-    min-height: 160px;
-    padding: 20px 15px 50px 15px;
-  }
-
-  .nube-sessio p {
-    font-size: 16px;
-  }
-
-  .personaje-panot {
-    max-width: 200px;
-  }
-
-  .buscador-inferior input {
-    padding: 14px 18px;
-    font-size: 15px;
-  }
-
-  .barra ul {
-    width: 98vw;
-  }
-
-  .barra li {
-    width: 15vw;
-    height: 15vw;
-  }
-
-  .pannot {
-    width: 20vw !important;
-    height: 20vw !important;
-  }
-
-  .barra {
-    min-height: 60px;
-    padding: 8px 0 12px 0;
-  }
-}
