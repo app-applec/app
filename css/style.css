@@ -38,12 +38,12 @@
     padding: 0;
 }
 
-body {
+html, body {
     background-color: #FFFAEA;
     font-family: 'SourceSans-Regular', sans-serif;
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden; /* Mantiene la app fija */
+    height: 100%;
+    height: 100dvh; /* Altura dinámica para móviles (ignora la barra del navegador) */
+    overflow: hidden; /* Bloquea el scroll del body, lo gestionamos en .screen */
 }
 
 #app-container {
@@ -58,11 +58,12 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    width: 100%;
+    height: 100%; /* Ocupa el 100% del app-container */
     padding: 4vh 8vw;
-    /* Esto permite que la pantalla de registro (y otras largas) tengan scroll */
-    overflow-y: auto; 
+    overflow-y: auto; /* PERMITE EL SCROLL AQUÍ */
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Scroll fluido en iOS */
 }
 
 /* Ocultar la barra de scroll visual para que parezca una App nativa */
@@ -223,7 +224,7 @@ body {
 }
 #step-3 .custom-form { 
     margin-top: 3vh; 
-    padding-bottom: 5vh; /* Asegura espacio al final para hacer scroll cómodamente */
+    padding-bottom: 12vh; /* Espacio extra asegurado al final para que el scroll llegue bien abajo */
 } 
 #step-3 .input-group input { height: 6vh; min-height: 42px; } 
 #step-3 .input-group { margin-bottom: 2.5vh; } 
@@ -237,7 +238,7 @@ body {
     padding-bottom: 0; 
     justify-content: flex-start;
     position: relative;
-    overflow: hidden; /* Bloquea el scroll solo en las pantallas del personaje */
+    overflow: hidden; /* Aquí sí bloqueamos el scroll para que el muñeco no se mueva */
     height: 100%;
 }
 
@@ -246,29 +247,24 @@ body {
     margin-top: 1vh;
 }
 
-/* NUBE DE TEXTO Y BOTONES INTERNOS */
+/* NUBE DE TEXTO Y BOTONES INTERNOS (TAMAÑO REDUCIDO) */
 .speech-container {
-    width: 95%;
-    max-width: 380px;
+    width: 88%; /* Reducido para encajar en pantallas estrechas */
+    max-width: 320px; /* Ancho máximo mucho menor */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 14vh; /* Ajuste para dar espacio al muñeco */
+    top: 10vh; /* Subido ligeramente */
     z-index: 10;
 }
 
-/* IMPORTANTE: Los paddings de la nube vuelven a pixeles para encajar con la imagen de la nube */
-#step-4 .speech-bubble,
-#step-5 .speech-bubble,
-#step-6 .speech-bubble,
-#step-7 .speech-bubble,
-#step-8 .speech-bubble {
+.speech-bubble {
     background-image: url('../img/nube-sessio.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 250px; 
-    padding: 55px 35px 105px 70px; /* Margen para que el texto y botones encajen dentro del fondo blanco */
+    min-height: 180px; /* Altura mínima reducida */
+    padding: 40px 25px 75px 40px; /* Paddings mucho más pequeños para aprovechar el espacio blanco */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -280,11 +276,11 @@ body {
 #step-7 .speech-bubble p,
 #step-8 .speech-bubble p {
     font-family: 'SourceSans-Regular', sans-serif;
-    font-size: clamp(16px, 4.5vw, 19px);
+    font-size: clamp(14px, 4vw, 16px); /* Letra más pequeña */
     color: #000;
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: left;
-    margin-left: -10px;
+    margin-left: -5px;
 }
 
 #step-4 .speech-bubble strong,
@@ -292,7 +288,7 @@ body {
 #step-6 .speech-bubble strong,
 #step-7 .speech-bubble strong,
 #step-8 .speech-bubble strong { 
-    font-size: clamp(18px, 5.5vw, 23px); 
+    font-size: clamp(16px, 4.5vw, 19px); /* Letra más pequeña */
     font-weight: bold;
     font-family: 'Kepler';
 }
@@ -302,10 +298,10 @@ body {
 #step-7 .btn-next-arrow,
 #step-8 .btn-next-arrow {
     position: absolute;
-    right: 30px; 
-    bottom: 35px; /* Fijado con px para que encaje dentro del área blanca de la nube */
-    width: 48px;
-    height: 48px;
+    right: 20px; /* Más cerca del borde */
+    bottom: 25px; /* Más arriba */
+    width: 40px; /* Flecha más pequeña */
+    height: 40px;
     background-color: #F5C143;
     border-radius: 50%;
     border: none;
@@ -315,17 +311,17 @@ body {
     align-items: center;
     justify-content: center;
 }
-.btn-next-arrow img { width: 28px; }
+.btn-next-arrow img { width: 20px; }
 
 /* GRUPO DE BOTONES (ESTUDIANT / PROFESSOR) DENTRO DE LA NUBE */
 .role-button-group, .level-button-group {
     position: absolute;
-    bottom: 40px; /* Fijado con px dentro de la nube */
+    bottom: 28px; /* Subidos para no salirse de la nube */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Espacio reducido entre botones */
     width: 90%;
     padding: 0;
 }
@@ -336,50 +332,51 @@ body {
     font-family: 'SourceSans-Bold', sans-serif;
     font-weight: bold;
     border: none;
-    border-radius: 15px;
-    padding: 12px 15px;
+    border-radius: 12px; /* Menos redondeado */
+    padding: 10px 8px; /* Botones más compactos */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    min-width: 100px;
-    flex: 1; /* Para que todos tengan el mismo ancho */
-    max-width: 140px;
-    font-size: 14px;
+    min-width: 85px; /* Ancho mínimo reducido */
+    flex: 1;
+    max-width: 130px;
+    font-size: 13px; /* Letra de botones reducida */
     text-align: center;
     cursor: pointer;
 }
 
 /* AJUSTE ESPECÍFICO PÁGINA 6: 3 BOTONES (BAIX, MIG, ALT) */
 #step-6 .level-button-group {
-    gap: 8px;
+    gap: 5px; /* Casi pegados para que quepan bien los 3 */
     width: 95%;
 }
 #step-6 .level-button-group .btn-role {
-    min-width: 0; /* Permite que se encojan si no caben */
-    padding: 12px 5px;
-    font-size: 13px;
-    border-radius: 12px;
+    min-width: 0; 
+    padding: 8px 4px; /* Aún más compactos */
+    font-size: 11px; /* Letra pequeña para que no se rompan las palabras */
+    border-radius: 10px;
 }
 
 /* ======================================================================
-   PERSONAJE (PANOT) CORREGIDO 
+   PERSONAJE (PANOT) CORREGIDO Y REDUCIDO
    ====================================================================== */
 .character-container {
     position: absolute;
-    bottom: 0; /* Siempre pegado al fondo */
+    bottom: 0; /* Pegado al fondo */
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
     display: flex;
     justify-content: center;
     line-height: 0;
-    pointer-events: none; /* Evita que el personaje bloquee clics accidentales */
+    pointer-events: none;
     z-index: 5;
 }
 
 .character-img { 
-    height: 45vh; /* Altura dinámica: ocupa un 45% de la altura de la pantalla */
-    max-height: 450px; /* Límite para que no se haga gigante en pantallas enormes */
-    width: auto; /* El ancho se adapta automáticamente manteniendo proporción */
+    height: 32vh; /* Altura muy reducida (antes 45vh) */
+    max-height: 300px; /* Límite estricto de altura */
+    width: auto; 
+    max-width: 85vw; /* Impide que sea más ancho que la pantalla en móviles raros */
     object-fit: contain;
-    object-position: bottom; /* Lo ancla a la parte inferior */
+    object-position: bottom;
     margin-bottom: 0; 
 }
