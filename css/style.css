@@ -42,13 +42,14 @@ body {
     background-color: #FFFAEA;
     font-family: 'SourceSans-Regular', sans-serif;
     height: 100vh;
+    height: 100dvh;
     overflow: hidden;
 }
 
 #app-container {
     width: 100%;
     height: 100%;
-    max-width: 500px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
