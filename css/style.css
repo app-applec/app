@@ -42,8 +42,8 @@ html, body {
     background-color: #FFFAEA;
     font-family: 'SourceSans-Regular', sans-serif;
     height: 100%;
-    height: 100dvh; /* Altura dinámica para móviles (ignora la barra del navegador) */
-    overflow: hidden; /* Bloquea el scroll del body, lo gestionamos en .screen */
+    height: 100dvh; /* Altura dinámica para móviles */
+    overflow: hidden; /* Bloquea el scroll general */
 }
 
 #app-container {
@@ -59,14 +59,13 @@ html, body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%; /* Ocupa el 100% del app-container */
+    height: 100%;
     padding: 4vh 8vw;
-    overflow-y: auto; /* PERMITE EL SCROLL AQUÍ */
+    overflow-y: auto; /* Scroll habilitado por pantalla */
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch; /* Scroll fluido en iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Ocultar la barra de scroll visual para que parezca una App nativa */
 .screen::-webkit-scrollbar { display: none; }
 .screen { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -127,7 +126,7 @@ html, body {
     text-transform: uppercase;
 }
 
-/* FORMULARIOS */
+/* FORMULARIOS (Funciona perfecto) */
 
 .custom-form {
     width: 100%;
@@ -224,37 +223,40 @@ html, body {
 }
 #step-3 .custom-form { 
     margin-top: 3vh; 
-    padding-bottom: 12vh; /* Espacio extra asegurado al final para que el scroll llegue bien abajo */
+    padding-bottom: 12vh;
 } 
 #step-3 .input-group input { height: 6vh; min-height: 42px; } 
 #step-3 .input-group { margin-bottom: 2.5vh; } 
 #step-3 .btn-full { height: 8vh; min-height: 55px; margin-top: 3vh; } 
 
 /* ======================================================================
-   PÁGINAS CON PANOT (4, 5, 6, 7 y 8)
+   PÁGINAS CON PANOT (4, 5, 6, 7 y 8) - REDISEÑADO
    ====================================================================== */
 
 #step-4, #step-5, #step-6, #step-7, #step-8 {
+    padding-top: 3vh; 
     padding-bottom: 0; 
     justify-content: flex-start;
+    align-items: center;
     position: relative;
-    overflow: hidden; /* Aquí sí bloqueamos el scroll para que el muñeco no se mueva */
+    overflow: hidden; /* Bloqueamos scroll aquí para fijar la imagen */
     height: 100%;
 }
 
 .logo-faded {
     opacity: 0.35;
-    margin-top: 1vh;
+    width: 20vw;
+    height: 20vw;
+    max-width: 80px;
+    margin-top: 0;
 }
 
-/* NUBE DE TEXTO Y BOTONES INTERNOS (TAMAÑO REDUCIDO) */
+/* NUBE DE TEXTO (Flujo natural relativo al logo) */
 .speech-container {
-    width: 88%; /* Reducido para encajar en pantallas estrechas */
-    max-width: 320px; /* Ancho máximo mucho menor */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10vh; /* Subido ligeramente */
+    width: 88%; 
+    max-width: 350px; 
+    margin-top: 3vh; /* Espaciado fluido, sin position: absolute */
+    position: relative;
     z-index: 10;
 }
 
@@ -263,45 +265,38 @@ html, body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 180px; /* Altura mínima reducida */
-    padding: 40px 25px 75px 40px; /* Paddings mucho más pequeños para aprovechar el espacio blanco */
+    min-height: 190px; 
+    /* El padding bottom es muy amplio (75px) para asegurar que la cola 
+       de la nube quede por fuera del área de contenido */
+    padding: 30px 25px 75px 25px; 
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-#step-4 .speech-bubble p,
-#step-5 .speech-bubble p,
-#step-6 .speech-bubble p,
-#step-7 .speech-bubble p,
-#step-8 .speech-bubble p {
+.speech-bubble p {
     font-family: 'SourceSans-Regular', sans-serif;
-    font-size: clamp(14px, 4vw, 16px); /* Letra más pequeña */
+    font-size: clamp(14px, 4.5vw, 17px); 
     color: #000;
     line-height: 1.4;
     text-align: left;
-    margin-left: -5px;
+    margin-bottom: 10px; /* Separación con los botones */
 }
 
-#step-4 .speech-bubble strong,
-#step-5 .speech-bubble strong,
-#step-6 .speech-bubble strong,
-#step-7 .speech-bubble strong,
-#step-8 .speech-bubble strong { 
-    font-size: clamp(16px, 4.5vw, 19px); /* Letra más pequeña */
+.speech-bubble strong { 
+    font-size: clamp(16px, 4.8vw, 19px); 
     font-weight: bold;
     font-family: 'Kepler';
 }
 
-/* FLECHAS DENTRO DE LA NUBE (Pag 4, 7, 8) */
-#step-4 .btn-next-arrow,
-#step-7 .btn-next-arrow,
-#step-8 .btn-next-arrow {
+/* FLECHAS DENTRO DE LA NUBE */
+.btn-next-arrow {
     position: absolute;
-    right: 20px; /* Más cerca del borde */
-    bottom: 25px; /* Más arriba */
-    width: 40px; /* Flecha más pequeña */
-    height: 40px;
+    right: 25px; 
+    bottom: 25px; /* Calculado perfecto para asomar justo arriba de la cola */
+    width: 45px; 
+    height: 45px;
     background-color: #F5C143;
     border-radius: 50%;
     border: none;
@@ -311,18 +306,18 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-.btn-next-arrow img { width: 20px; }
+.btn-next-arrow img { width: 22px; }
 
-/* GRUPO DE BOTONES (ESTUDIANT / PROFESSOR) DENTRO DE LA NUBE */
+/* GRUPO DE BOTONES FLEXIBLES DENTRO DE LA NUBE */
 .role-button-group, .level-button-group {
     position: absolute;
-    bottom: 28px; /* Subidos para no salirse de la nube */
+    bottom: 28px; /* Fija los botones de forma segura sobre la cola de la nube */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacio reducido entre botones */
-    width: 90%;
+    gap: 8px; /* Espaciado ajustado */
+    width: 85%; /* No llegan al borde de la imagen */
     padding: 0;
 }
 
@@ -332,51 +327,44 @@ html, body {
     font-family: 'SourceSans-Bold', sans-serif;
     font-weight: bold;
     border: none;
-    border-radius: 12px; /* Menos redondeado */
-    padding: 10px 8px; /* Botones más compactos */
+    border-radius: 10px;
+    padding: 12px 5px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    min-width: 85px; /* Ancho mínimo reducido */
-    flex: 1;
-    max-width: 130px;
-    font-size: 13px; /* Letra de botones reducida */
+    flex: 1; /* Esto es la magia: se estiran y encogen para caber siempre */
+    font-size: clamp(11px, 3.5vw, 14px); 
     text-align: center;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 /* AJUSTE ESPECÍFICO PÁGINA 6: 3 BOTONES (BAIX, MIG, ALT) */
 #step-6 .level-button-group {
-    gap: 5px; /* Casi pegados para que quepan bien los 3 */
-    width: 95%;
+    gap: 5px; 
+    width: 90%;
 }
-#step-6 .level-button-group .btn-role {
-    min-width: 0; 
-    padding: 8px 4px; /* Aún más compactos */
-    font-size: 11px; /* Letra pequeña para que no se rompan las palabras */
-    border-radius: 10px;
+#step-6 .btn-role {
+    padding: 10px 2px; 
+    font-size: clamp(10px, 3vw, 12px);
+    border-radius: 8px;
 }
 
 /* ======================================================================
-   PERSONAJE (PANOT) CORREGIDO Y REDUCIDO
+   PERSONAJE (PANOT) FIJADO ABAJO
    ====================================================================== */
 .character-container {
     position: absolute;
-    bottom: 0; /* Pegado al fondo */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
+    bottom: -2vh; /* Un poco por debajo del límite para esconder recortes */
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    line-height: 0;
     pointer-events: none;
-    z-index: 5;
+    z-index: 5; /* Queda POR DETRÁS de la nube */
 }
 
 .character-img { 
-    height: 32vh; /* Altura muy reducida (antes 45vh) */
-    max-height: 300px; /* Límite estricto de altura */
+    height: clamp(250px, 42vh, 400px); /* Altura elástica que se adapta a cualquier móvil */
     width: auto; 
-    max-width: 85vw; /* Impide que sea más ancho que la pantalla en móviles raros */
     object-fit: contain;
     object-position: bottom;
-    margin-bottom: 0; 
 }
