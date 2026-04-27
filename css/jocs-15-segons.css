@@ -134,6 +134,24 @@ body {
     background-color: white;
     border-radius: 40px;
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
+
+    /* AÑADE ESTO: */
+    display: flex;
+    flex-direction: column; /* Las palabras irán una debajo de otra */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    padding: 20px;          /* Espacio para que el texto no toque los bordes */
+    overflow-y: auto;       /* Si escriben mucho, permitirá hacer scroll */
+    text-align: center;
+}
+
+.palabra-acumulada {
+    font-family: 'SourceSans-Bold', sans-serif;
+    font-size: 24px;       /* Ajusta el tamaño a tu gusto */
+    color: #333;
+    margin-bottom: 5px;    /* Espacio entre palabras */
+    width: 100%;
+    word-wrap: break-word; /* Evita que palabras largas se salgan de la tarjeta */
 }
 
 .boton-habitacio {
