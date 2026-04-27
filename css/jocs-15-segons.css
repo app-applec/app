@@ -1,75 +1,101 @@
-/* RESET GENERAL */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #F5C143;
     font-family: 'SourceSans-Regular', sans-serif;
-    /* Usamos dvh para que se adapte al tamaño real del navegador móvil */
-    height: 100dvh; 
+    height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
+    box-sizing: border-box;
+}
+
+* {
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* TIPOGRAFÍAS */
+
 @font-face {
     font-family: 'Kepler';
     src: url('../fonts/KeplerStdBold.woff') format('woff');
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Kepler';
+    src: url('../fonts/KeplerStdRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'SourceSans-Bold';
     src: url('../fonts/SourceSans3-Bold.woff') format('woff');
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'SourceSans-Regular';
     src: url('../fonts/SourceSans3-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .groga-fond {
     width: 100%;
     max-width: 500px;
-    /* min-height asegura que si hay mucho contenido, se pueda hacer scroll */
-    min-height: 87dvh; 
+    height: 85vh;
     background-color: #FFFAE9;
-    position: absolute;
-    bottom: 0; /* Pegado abajo para que el borde redondeado superior luzca */
+    position: fixed;
+    top: 13%;
     border-radius: 30px 30px 0 0;
     overflow-y: auto;
     z-index: 10;
-    padding-bottom: 100px; /* Espacio para el menú inferior */
 }
 
-/* BOTON SUPERIOR (Flecha) */
+
+/* BOTON SUPERIOR */
+
 .flecha {
     width: 40px;
     height: 40px;
     background-image: url(../img/flecha-retro.png);
     background-repeat: no-repeat;
     background-size: contain;
-    position: fixed; /* Para que no se mueva al hacer scroll en el fondo amarillo */
-    top: 25px;
-    left: 25px;
+    float: left;
+    margin: 25px;
     z-index: 1000;
+    display: block;
+    position: relative;
 }
 
-/* CONTENIDO JUEGO */
+/* CONTENIDO TARGETA */
+
 .juego-contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .seccion-tiempo {
@@ -78,48 +104,45 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px;
-    padding-right: 5%;
 }
 
 .numero-15 {
-    /* Tamaño fluido: mínimo 35px, ideal 10% del ancho, máximo 55px */
-    font-size: clamp(35px, 10vw, 55px);
+    font-size: 12vw;
     font-weight: bold;
     font-family: 'SourceSans-Bold', sans-serif;
     margin-right: 10px;
-    color: #E74C3C; /* Color rojo de la captura */
 }
 
 .icono-reloj {
-    width: clamp(35px, 8vw, 50px);
-    height: clamp(35px, 8vw, 50px);
+    width: 50px;
+    height: 50px;
     background-image: url(../img/relog-jocs.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-/* TARJETA */
 .contenedor-tarjeta {
-    width: 90%;
-    max-width: 400px;
+    width: 92%;
+    max-width: 450px;
+    position: relative;
     margin-top: 10px;
 }
 
 .tarjeta-blanca {
     width: 100%;
-    aspect-ratio: 1/1; /* Mantiene el cuadrado perfecto */
+    aspect-ratio: 1/1;
     background-color: white;
     border-radius: 40px;
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
 .boton-habitacio {
     position: absolute;
-    bottom: -30px; /* Posición fija respecto a la tarjeta blanca */
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 60px; /* Altura táctil ergonómica */
+    width: 85%;
+    height: 65px;
     background-color: #F5C143;
     color: white;
     border-radius: 20px;
@@ -127,15 +150,14 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'SourceSans-Bold', sans-serif;
-    font-size: clamp(18px, 6vw, 26px);
+    font-size: 7vw;
+    max-font-size: 32px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 20;
 }
 
-/* INPUT */
 .contenedor-input {
     width: 85%;
-    margin-top: 70px; /* Espacio suficiente para que no choque con el botón amarillo */
+    margin-top: 80px;
 }
 
 .input-juego {
@@ -145,29 +167,15 @@ body {
     border: 1px solid #eee;
     padding: 0 20px;
     font-size: 18px;
-    background-color: #EDEDED; /* Gris claro como en la imagen */
+    background-color: white;
     outline: none;
-    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* FOOTER (Menú inferior) */
-/* He añadido esta clase basándome en tu imagen */
-.menu-inferior {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    max-width: 500px;
-    height: 80px;
-    background-image: url(../img/tu-menu-footer.png); /* Ajusta a tu imagen real */
-    background-size: cover;
-    z-index: 100;
-}
-
-/* MEDIA QUERIES PARA PANTALLAS MUY PEQUEÑAS */
-@media (max-height: 600px) {
-    .groga-fond { top: 10%; }
-    .contenedor-tarjeta { width: 75%; }
-    .contenedor-input { margin-top: 50px; }
+@media (max-width: 380px) {
+    .numero-15 { font-size: 40px; }
+    .boton-habitacio { height: 50px; font-size: 22px; }
+    .contenedor-input { margin-top: 60px; }
 }
 
 /* BARRA MENÚ */
