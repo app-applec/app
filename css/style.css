@@ -47,7 +47,6 @@
 body {
     background-color: #FFFAEA;
     font-family: 'SourceSans-Regular', sans-serif;
-    height: 100vh;
     height: 100dvh;
     
 }
@@ -233,7 +232,6 @@ body {
 
 
 /* 2. REGISTRA'T (#step-3) */
-
 
 #step-3 .large-title {
     font-size: 40px;
