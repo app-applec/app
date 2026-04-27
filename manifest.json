@@ -1,0 +1,20 @@
+{
+  "name": "applec",
+  "short_name": "applec",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FFFAEA",
+  "theme_color": "#FFFAEA",
+  "icons": [
+    {
+      "src": "img/logo-applec.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "img/logo-2-applec.png",
+      "type": "image/png"
+    }
+  ]
+}
