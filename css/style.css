@@ -47,8 +47,9 @@
 body {
     background-color: #FFFAEA;
     font-family: 'SourceSans-Regular', sans-serif;
+    height: 100vh;
+    height: 100dvh;
     
-    overflow: hidden;
 }
 
 
@@ -64,7 +65,7 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     padding: 4vh 8vw;
 }
 
@@ -234,14 +235,13 @@ body {
 /* 2. REGISTRA'T (#step-3) */
 
 
-
 #step-3 .large-title {
     font-size: 40px;
     text-align: left;
     margin-top: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-#step-3 .custom-form { margin-top: 45px; height: 120vh; }
+#step-3 .custom-form { margin-top: 45px; }
 #step-3 .input-group input { height: 42px; }
 #step-3 .input-group { margin-bottom: 35px; }
 #step-3 .btn-full { height: 55px; }
