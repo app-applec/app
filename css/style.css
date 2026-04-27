@@ -218,7 +218,7 @@ body {
 
 
 #step-2 .form-title-serif {
-    margin-top: 40px;
+    margin-top: clamp(20px, 5vw, 40px);;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
