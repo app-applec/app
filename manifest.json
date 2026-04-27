@@ -12,8 +12,8 @@
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
-      "sizes": "img/logo-2-applec.png",
+      "src": "img/logo-2-applec.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
