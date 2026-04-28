@@ -1,6 +1,6 @@
 {
-  "name": "applec",
-  "short_name": "applec",
+  "name": "Applec",
+  "short_name": "Applec",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffbe00",
