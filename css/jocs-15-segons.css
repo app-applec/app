@@ -258,6 +258,8 @@ body {
     top: -3vw;
 }
 
+    #jocs15segons .pannot {margin-top: -0.5vh}
+
 .recursos {
     background-image: url(../img/recursos-blanc.png);
 }

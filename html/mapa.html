@@ -25,7 +25,7 @@
 
     <nav class="barra">
         <ul>
-            <li class="home"><a href="pg1home.html"></a></li>
+            <li class="home"><a href="index.html"></a></li>
             <li class="grups"></li>
             <li class="pannot"><a href="pg3panot.html"></a></li>
             <li class="recursos"><a href="pg4recursos.html"></a></li>
@@ -41,6 +41,8 @@
 
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+        
         if (document.getElementById(elmnt.id+"container")) {
             /* if present, the header is where you move the DIV from:*/
             document.getElementById(elmnt.id+"container").onmousedown = dragMouseDown;

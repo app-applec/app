@@ -233,6 +233,7 @@ body {
     background-image: url(../img/panot-perfil.png);
     background-size: contain;
     background-repeat: no-repeat; }
+    
 
 /* BARRA MENÚ */
 
@@ -243,7 +244,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%; 
     position: fixed;
-    bottom: 0;
+    bottom: -0.5vh;
     left: 0;
     right: 0;
     z-index: 9999;
@@ -295,6 +296,8 @@ body {
     margin-right: 3.5vw !important;
     top: -3vw;
 }
+
+    #paginaperfil .pannot {margin-top: -0.5vh}
 
 .recursos {
     background-image: url(../img/recursos-groc.png);

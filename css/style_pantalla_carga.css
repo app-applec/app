@@ -1,0 +1,74 @@
+body {
+    background-color: #F5C143;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+
+    overflow: hidden;
+}
+
+
+.icona {
+    background-image: url(../img/icono_apple_carga.png); 
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+    width: 29vw;
+    height: 16vh;
+    margin: auto;
+    
+  
+}
+
+
+
+.contenidor_icona{
+    transform: translateY(800px);
+    animation: subida 4s cubic-bezier(.25,.8,.25,1) forwards,
+               ampliar 4s ease-in 5s forwards;
+}
+
+
+.icona {
+    animation: rotacio 2s linear infinite;
+}
+
+
+@keyframes rotacio {
+    from {
+        transform: rotateZ(0deg);
+        
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes subida {
+  from {
+    opacity: 0;
+    transform: translateY(800px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(350px);
+  }
+}
+
+
+@keyframes ampliar {
+  from {
+    transform: translateY(350px) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(350px) scale(28);
+    opacity: 0;
+  }
+}
+
+
