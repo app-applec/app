@@ -402,10 +402,10 @@ body {
 .icona {
     background-image: url('../img/icono_apple_carga.png');
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
     background-position: center;
-    width: 15vh;
-    height: 20vh;
+    width: 7.5vh;
+    height: 10vh;
     margin: auto;
     animation: rotacio 2s linear infinite;
 }
